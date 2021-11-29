@@ -1,0 +1,18 @@
+---
+  !!python/object:__main__.Hero
+  name: Welthyr Syxgon
+  hp: 1200
+  sp: 0
+
+---
+  !!python/object:__main__.Hero
+  name: Bonny Syxgon
+  hp: 1500
+  sp: 20
+
+---
+  !!python/object:__main__.DemoHero
+  name: Mike
+  hp: 2000
+  sp: 20
+  demo: true

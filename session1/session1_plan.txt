@@ -1,0 +1,11 @@
+if __name__ == "__main__":
+Default parameter value in function and class
+Arbitrary Arguments, *args for function and class
+Arbitrary Keyword Arguments, **kwargs for function and class
+Difference between class variable and class instance(object) variables  (github_grabber.py)
+How to get and set object attributes outside of the object
+getattr, setattr, delattr built-in functions
+__dict__ variable for class instance
+Difference between class __dict__ and object __dict__ after adding to object new attributes.
+Definition of object method, class method and static method.
+The base __dict__ storage, object variable.

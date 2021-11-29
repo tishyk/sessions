@@ -1,0 +1,39 @@
+def __create_max_files_and_check(self):
+
+	self._fail()
+	threads = []
+	results = []
+	self.semaphore = threading.Semaphore(self.args.threads)
+	number = locale.format('%d', self.file_count_to_create, True)
+
+	# Create test files
+	testlog.info("Creating %s files under path %s" % (number, self.args.dir_path))
+	testlog.debug("Starting %d concurrent threads" % self.args.threads)
+	for i, j in enumerate(list(range(0, self.file_count_to_create, self.args.num_per_folder))):
+		self.semaphore.acquire()
+		if (self.file_count_to_create - j) < self.args.num_per_folder:
+			num_of_files = self.file_count_to_create - j
+		else:
+			num_of_files = self.args.num_per_folder
+		dirname = args.arg_tsprefix(self.dirname_prefix)
+		thread = CBasicThread(self.create_files, (dirname, num_of_files), dirname)
+		testlog.debug("Starting thread #%d" % (i))
+		thread.start()
+		threads.append(thread)
+	for thread in threads:
+		thread.join()
+		results.append( thread.retResult() )
+
+	# Verify Test Files were created
+	if self.args.check:
+		if self.files_created == self.file_count_to_create:
+			testlog.info("Created the expected number of files")
+			if all(results):
+				testlog.info("Every thread passed")
+				self._pass()
+			else:
+				testlog.error("One or more threads failed")
+		else:
+			testlog.error("Created %d of %d files" % (self.files_created, self.file_count_to_create))
+
+	return self.results_obj

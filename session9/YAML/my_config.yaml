@@ -1,0 +1,47 @@
+# Comments
+
+word: "Some string"    # no ""
+num: 2009       # int, float
+none: null      # None
+bool: true      # Bool, yes
+
+# one line list
+lst1: [string value, 123, null]
+
+# Multiline list
+lst2:
+    - string   # comments
+    # comments
+    - 123
+    - null
+
+# one line dict
+dic1: {word : буквы, b : yes, none : null}
+
+# Multiline dict
+dic2:
+    word: string
+    num: 123
+    none: null
+
+# Text without /n
+big_str1: >
+    Hello
+    dear
+    User
+# Text with /n
+big_str2: |
+    Hello
+    Hi
+    Greatings
+
+# nested objects
+langs:
+    - xml
+    - read
+    - usage
+    - destination
+    - YAML:
+        read: quick
+        usage: simple
+        destination: config files

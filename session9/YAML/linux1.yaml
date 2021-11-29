@@ -1,0 +1,3114 @@
+---
+- compatible: ["renesas,salvator-x\0renesas,r8a7795"]
+  '#address-cells': [[0x2]]
+  '#size-cells': [[0x2]]
+  model: ["PCC ZR3 board based on r8a7795"]
+  aliases:
+    i2c0: ["/soc/i2c@e6500000"]
+    i2c1: ["/soc/i2c@e6508000"]
+    i2c2: ["/soc/i2c@e6510000"]
+    i2c3: ["/soc/i2c@e66d0000"]
+    i2c4: ["/soc/i2c@e66d8000"]
+    i2c5: ["/soc/i2c@e66e0000"]
+    i2c6: ["/soc/i2c@e66e8000"]
+    i2c7: ["/soc/i2c@e60b0000"]
+    spi0: ["/soc/spi@e6e90000"]
+    spi1: ["/soc/spi@e6e90000"]
+    spi2: ["/soc/spi@e6ea0000"]
+    spi3: ["/soc/spi@e6c00000"]
+    serial0: ["/soc/vdev_uart@e6e60000"]
+    serial1: ["/soc/serial@e6550000"]
+    serial2: ["/soc/serial@e6560000"]
+    spi4: ["/soc/spi@e6c10000"]
+    ethernet0: ["/soc/ethernet@e6800000"]
+  audio_clk_a:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x5dc000]]
+    linux,phandle: [[0x4b]]
+    phandle: [[0x4b]]
+  audio_clk_b:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x4c]]
+    phandle: [[0x4c]]
+  audio_clk_c:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x4d]]
+    phandle: [[0x4d]]
+  can:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x2f]]
+    phandle: [[0x2f]]
+  opp_table0:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0xc]]
+    phandle: [[0xc]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xcaa30]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xcaa30]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xcaa30]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table1:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0xd]]
+    phandle: [[0xd]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xc8320]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xc8320]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xc8320]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table2:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0xe]]
+    phandle: [[0xe]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xc5c10]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xc5c10]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xc5c10]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table3:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0xf]]
+    phandle: [[0xf]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xc3500]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xc3500]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xc3500]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table4:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0x10]]
+    phandle: [[0x10]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xc0df0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xc0df0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xc0df0]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table5:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0x11]]
+    phandle: [[0x11]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xbe6e0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xbe6e0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xbe6e0]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table6:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0x12]]
+    phandle: [[0x12]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xbbfd0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xbbfd0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xbbfd0]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table7:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0x13]]
+    phandle: [[0x13]]
+    opp-500000000:
+      opp-hz: [[0x0, 0x1dcd6500]]
+      opp-microvolt: [[0xb98c0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xb98c0]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1500000000:
+      opp-hz: [[0x0, 0x59682f00]]
+      opp-microvolt: [[0xb98c0]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  opp_table10:
+    compatible: ["operating-points-v2"]
+    opp-shared: true
+    linux,phandle: [[0x17]]
+    phandle: [[0x17]]
+    opp-800000000:
+      opp-hz: [[0x0, 0x2faf0800]]
+      opp-microvolt: [[0xc8320]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1000000000:
+      opp-hz: [[0x0, 0x3b9aca00]]
+      opp-microvolt: [[0xc8320]]
+      clock-latency-ns: [[0x493e0]]
+    opp-1200000000:
+      opp-hz: [[0x0, 0x47868c00]]
+      opp-microvolt: [[0xc8320]]
+      clock-latency-ns: [[0x493e0]]
+      opp-suspend: true
+  cpus:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    cpu-map:
+      cluster0:
+        core0:
+          cpu: [[0x1]]
+        core2:
+          cpu: [[0x2]]
+        core3:
+          cpu: [[0x3]]
+      cluster1:
+        core0:
+          cpu: [[0x4]]
+        core1:
+          cpu: [[0x5]]
+        core2:
+          cpu: [[0x6]]
+        core3:
+          cpu: [[0x7]]
+    cpu@0:
+      compatible: ["arm,cortex-a57\0arm,armv8"]
+      reg: [[0x0]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x0]]
+      next-level-cache: [[0x9]]
+      enable-method: ["psci"]
+      dynamic-power-coefficient: [[0x356]]
+      cooling-min-level: [[0x0]]
+      cooling-max-level: [[0x2]]
+      cpu-idle-states: [[0xa]]
+      clocks: [[0xb, 0x0, 0x0]]
+      operating-points-v2: [[0xc, 0xd, 0xe, 0xf, 0x10, 0x11, 0x12, 0x13]]
+      '#cooling-cells': [[0x2]]
+      capacity-dmips-mhz: [[0x400]]
+      cpu-supply: [[0x14]]
+      linux,phandle: [[0x1]]
+      phandle: [[0x1]]
+    cpu@2:
+      compatible: ["arm,cortex-a57\0arm,armv8"]
+      reg: [[0x1]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x2]]
+      next-level-cache: [[0x9]]
+      enable-method: ["psci"]
+      cpu-idle-states: [[0xa]]
+      clocks: [[0xb, 0x0, 0x0]]
+      operating-points-v2: [[0xc, 0xd, 0xe, 0xf, 0x10, 0x11, 0x12, 0x13]]
+      '#cooling-cells': [[0x2]]
+      capacity-dmips-mhz: [[0x400]]
+      linux,phandle: [[0x2]]
+      phandle: [[0x2]]
+    cpu@3:
+      compatible: ["arm,cortex-a57\0arm,armv8"]
+      reg: [[0x2]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x3]]
+      next-level-cache: [[0x9]]
+      enable-method: ["psci"]
+      cpu-idle-states: [[0xa]]
+      clocks: [[0xb, 0x0, 0x0]]
+      operating-points-v2: [[0xc, 0xd, 0xe, 0xf, 0x10, 0x11, 0x12, 0x13]]
+      '#cooling-cells': [[0x2]]
+      capacity-dmips-mhz: [[0x400]]
+      linux,phandle: [[0x3]]
+      phandle: [[0x3]]
+    cpu@100:
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      reg: [[0x3]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x5]]
+      next-level-cache: [[0x15]]
+      enable-method: ["psci"]
+      '#cooling-cells': [[0x2]]
+      dynamic-power-coefficient: [[0x115]]
+      cooling-min-level: [[0x0]]
+      cooling-max-level: [[0x2]]
+      cpu-idle-states: [[0x16]]
+      clocks: [[0xb, 0x0, 0x1]]
+      operating-points-v2: [[0x17]]
+      capacity-dmips-mhz: [[0x21c]]
+      linux,phandle: [[0x4]]
+      phandle: [[0x4]]
+    cpu@101:
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      reg: [[0x100]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x6]]
+      next-level-cache: [[0x15]]
+      enable-method: ["psci"]
+      cpu-idle-states: [[0x16]]
+      clocks: [[0xb, 0x0, 0x1]]
+      operating-points-v2: [[0x17]]
+      capacity-dmips-mhz: [[0x21c]]
+      linux,phandle: [[0x5]]
+      phandle: [[0x5]]
+    cpu@102:
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      reg: [[0x101]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x7]]
+      next-level-cache: [[0x15]]
+      enable-method: ["psci"]
+      cpu-idle-states: [[0x16]]
+      clocks: [[0xb, 0x0, 0x1]]
+      operating-points-v2: [[0x17]]
+      capacity-dmips-mhz: [[0x21c]]
+      linux,phandle: [[0x6]]
+      phandle: [[0x6]]
+    cpu@103:
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      reg: [[0x102]]
+      device_type: ["cpu"]
+      power-domains: [[0x8, 0x8]]
+      next-level-cache: [[0x15]]
+      enable-method: ["psci"]
+      cpu-idle-states: [[0x16]]
+      clocks: [[0xb, 0x0, 0x1]]
+      operating-points-v2: [[0x17]]
+      capacity-dmips-mhz: [[0x21c]]
+      linux,phandle: [[0x7]]
+      phandle: [[0x7]]
+    cache-controller-0:
+      compatible: ["cache"]
+      power-domains: [[0x8, 0xc]]
+      cache-unified: true
+      cache-level: [[0x2]]
+      linux,phandle: [[0x9]]
+      phandle: [[0x9]]
+    cache-controller-1:
+      compatible: ["cache"]
+      power-domains: [[0x8, 0x15]]
+      cache-unified: true
+      cache-level: [[0x2]]
+      linux,phandle: [[0x15]]
+      phandle: [[0x15]]
+    idle-states:
+      entry-method: ["psci"]
+      cpu-sleep-0:
+        compatible: ["arm,idle-state"]
+        arm,psci-suspend-param: [[0x10000]]
+        local-timer-stop: true
+        entry-latency-us: [[0x190]]
+        exit-latency-us: [[0x1f4]]
+        min-residency-us: [[0xfa0]]
+        status: ["okay"]
+        linux,phandle: [[0xa]]
+        phandle: [[0xa]]
+      cpu-sleep-1:
+        compatible: ["arm,idle-state"]
+        arm,psci-suspend-param: [[0x10000]]
+        local-timer-stop: true
+        entry-latency-us: [[0x2bc]]
+        exit-latency-us: [[0x2bc]]
+        min-residency-us: [[0x1388]]
+        status: ["okay"]
+        linux,phandle: [[0x16]]
+        phandle: [[0x16]]
+  extal:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x17d7840]]
+    linux,phandle: [[0x1b]]
+    phandle: [[0x1b]]
+  extalr:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x1c]]
+    phandle: [[0x1c]]
+  usb_xtal:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x59]]
+    phandle: [[0x59]]
+  firmware:
+    optee:
+      compatible: ["linaro,optee-tz"]
+      method: ["smc"]
+  gsx_opp_table0:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x62]]
+    phandle: [[0x62]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xcaa30]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xcaa30]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xcaa30]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xcaa30]]
+  gsx_opp_table1:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x63]]
+    phandle: [[0x63]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xc8320]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xc8320]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xc8320]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xc8320]]
+  gsx_opp_table2:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x64]]
+    phandle: [[0x64]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xc5c10]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xc5c10]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xc5c10]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xc5c10]]
+  gsx_opp_table3:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x65]]
+    phandle: [[0x65]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xc3500]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xc3500]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xc3500]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xc3500]]
+  gsx_opp_table4:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x66]]
+    phandle: [[0x66]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xc0df0]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xc0df0]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xc0df0]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xc0df0]]
+  gsx_opp_table5:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x67]]
+    phandle: [[0x67]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xbe6e0]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xbe6e0]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xbe6e0]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xbe6e0]]
+  gsx_opp_table6:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x68]]
+    phandle: [[0x68]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xbbfd0]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xbbfd0]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xbbfd0]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xbbfd0]]
+  gsx_opp_table7:
+    compatible: ["operating-points-v2"]
+    linux,phandle: [[0x69]]
+    phandle: [[0x69]]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xb98c0]]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xb98c0]]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xb98c0]]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xb98c0]]
+  msiof-ref-clock:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x31]]
+    phandle: [[0x31]]
+  pcie_bus:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x5f5e100]]
+    status: ["okay"]
+    linux,phandle: [[0x6a]]
+    phandle: [[0x6a]]
+  psci:
+    compatible: ["arm,psci-1.0\0arm,psci-0.2"]
+    method: ["smc"]
+  scif:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x22]]
+    phandle: [[0x22]]
+  soc:
+    compatible: ["simple-bus"]
+    interrupt-parent: [[0x18]]
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    ranges: true
+    mfis@e6260000:
+      compatible: ["renesas,mfis-lock-r8a7795\0renesas,mfis-lock"]
+      reg: [[0x0, 0xe6260000, 0x0, 0x1000]]
+      '#hwlock-cells': [[0x1]]
+      mfis-as:
+        compatible: ["renesas,mfis-as-r8a7795\0renesas,mfis-as"]
+        interrupts: [[0x0, 0xb4, 0x4]]
+        interrupt-names: ["eicr0"]
+        renesas,mfis-ch: [[0x0]]
+    watchdog@e6020000:
+      compatible: ["renesas,r8a7795-wdt\0renesas,rcar-gen3-wdt"]
+      reg: [[0x0, 0xe6020000, 0x0, 0xc]]
+      clocks: [[0xb, 0x1, 0x192]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x192]]
+      status: ["okay"]
+      timeout-sec: [[0x3c]]
+    gpio@e6050000:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6050000, 0x0, 0x50]]
+      interrupts: [[0x0, 0x4, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0x0, 0x10]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x390]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x390]]
+    gpio@e6051000:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6051000, 0x0, 0x50]]
+      interrupts: [[0x0, 0x5, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0x20, 0x1d]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x38f]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x38f]]
+      linux,phandle: [[0x35]]
+      phandle: [[0x35]]
+    gpio@e6052000:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6052000, 0x0, 0x50]]
+      interrupts: [[0x0, 0x6, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0x40, 0xf]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x38e]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x38e]]
+    gpio@e6053000:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6053000, 0x0, 0x50]]
+      interrupts: [[0x0, 0x7, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0x60, 0x10]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x38d]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x38d]]
+    gpio@e6054000:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6054000, 0x0, 0x50]]
+      interrupts: [[0x0, 0x8, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0x80, 0x12]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x38c]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x38c]]
+      linux,phandle: [[0x33]]
+      phandle: [[0x33]]
+    gpio@e6055000:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6055000, 0x0, 0x50]]
+      interrupts: [[0x0, 0x9, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0xa0, 0x1a]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x38b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x38b]]
+    gpio@e6055800:
+      compatible: ["renesas,gpio-r8a7795\0renesas,rcar-gen3-gpio"]
+      reg: [[0x0, 0xe6055800, 0x0, 0x50]]
+      interrupts: [[0x0, 0xb, 0x4]]
+      '#gpio-cells': [[0x2]]
+      gpio-controller: true
+      gpio-ranges: [[0x19, 0x0, 0xe0, 0x4]]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      clocks: [[0xb, 0x1, 0x389]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x389]]
+      linux,phandle: [[0x58]]
+      phandle: [[0x58]]
+    pin-controller@e6060000:
+      compatible: ["renesas,pfc-r8a7795"]
+      reg: [[0x0, 0xe6060000, 0x0, 0x50c]]
+      linux,phandle: [[0x19]]
+      phandle: [[0x19]]
+      avb:
+        groups: ["avb_mdc"]
+        function: ["avb"]
+        linux,phandle: [[0x2d]]
+        phandle: [[0x2d]]
+      hscif1:
+        groups: ["hscif1_data_a\0hscif1_ctrl_a"]
+        function: ["hscif1"]
+        linux,phandle: [[0x23]]
+        phandle: [[0x23]]
+      hscif2:
+        groups: ["hscif2_data_a"]
+        function: ["hscif2"]
+        linux,phandle: [[0x24]]
+        phandle: [[0x24]]
+      spi2:
+        groups: ["msiof1_clk_d\0msiof1_ss1_d\0msiof1_rxd_d\0msiof1_txd_d"]
+        function: ["msiof1"]
+        linux,phandle: [[0x32]]
+        phandle: [[0x32]]
+      spi3:
+        groups: ["msiof2_clk_a\0msiof2_ss1_a\0msiof2_ss2_a\0msiof2_rxd_a\0msiof2_txd_a"]
+        function: ["msiof2"]
+        linux,phandle: [[0x34]]
+        phandle: [[0x34]]
+      spi4:
+        groups: ["msiof3_clk_b\0msiof3_ss1_b\0msiof3_ss2_b\0msiof3_rxd_b\0msiof3_txd_b"]
+        function: ["msiof3"]
+        linux,phandle: [[0x36]]
+        phandle: [[0x36]]
+      scif0:
+        groups: ["scif0_data\0scif0_ctrl"]
+        function: ["scif0"]
+        linux,phandle: [[0x30]]
+        phandle: [[0x30]]
+      sd2:
+        groups: ["sdhi2_data8\0sdhi2_ctrl\0sdhi2_ds"]
+        function: ["sdhi2"]
+        power-source: [[0xce4]]
+        linux,phandle: [[0x5e]]
+        phandle: [[0x5e]]
+      sd2_uhs:
+        groups: ["sdhi2_data8\0sdhi2_ctrl\0sdhi2_ds"]
+        function: ["sdhi2"]
+        power-source: [[0x708]]
+        linux,phandle: [[0x5f]]
+        phandle: [[0x5f]]
+      sound:
+        groups: ["ssi01239_ctrl\0ssi0_data\0ssi1_data_a\0ssi2_data_a\0ssi6_ctrl\0ssi6_data\0ssi78_ctrl\0ssi7_data\0ssi8_data"]
+        function: ["ssi"]
+        linux,phandle: [[0x4e]]
+        phandle: [[0x4e]]
+      sound_clk:
+        groups: ["audio_clkout_a"]
+        function: ["audio_clk"]
+        linux,phandle: [[0x4f]]
+        phandle: [[0x4f]]
+      irq0:
+        groups: ["intc_ex_irq0"]
+        function: ["intc_ex"]
+        linux,phandle: [[0x20]]
+        phandle: [[0x20]]
+    avs@e60a013c:
+      compatible: ["renesas,r8a7795-avs\0renesas,rcar-gen3-avs"]
+      reg: [[0x0, 0xe60a013c, 0x0, 0x4]]
+      target_devices: [[0x1, 0x2, 0x3, 0x1a]]
+    clock-controller@e6150000:
+      compatible: ["renesas,r8a7795-cpg-mssr"]
+      reg: [[0x0, 0xe6150000, 0x0, 0x1000]]
+      clocks: [[0x1b, 0x1c]]
+      clock-names: ["extal\0extalr"]
+      '#clock-cells': [[0x2]]
+      '#power-domain-cells': [[0x0]]
+      '#reset-cells': [[0x1]]
+      linux,phandle: [[0xb]]
+      phandle: [[0xb]]
+    reset-controller@e6160000:
+      compatible: ["renesas,r8a7795-rst"]
+      reg: [[0x0, 0xe6160000, 0x0, 0x200]]
+    system-controller@e6180000:
+      compatible: ["renesas,r8a7795-enable-on-boot-sysc"]
+      reg: [[0x0, 0xe6180000, 0x0, 0x400]]
+      '#power-domain-cells': [[0x1]]
+      linux,phandle: [[0x8]]
+      phandle: [[0x8]]
+    thermal@e6198000:
+      compatible: ["renesas,r8a7795-thermal"]
+      reg: [[0x0, 0xe6198000, 0x0, 0x100, 0x0, 0xe61a0000, 0x0, 0x100, 0x0, 0xe61a8000,
+          0x0, 0x100]]
+      interrupts: [[0x0, 0x43, 0x4, 0x0, 0x44, 0x4, 0x0, 0x45, 0x4]]
+      clocks: [[0xb, 0x1, 0x20a]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20a]]
+      '#thermal-sensor-cells': [[0x1]]
+      status: ["okay"]
+      linux,phandle: [[0x83]]
+      phandle: [[0x83]]
+    interrupt-controller@e61c0000:
+      compatible: ["renesas,intc-ex-r8a7795\0renesas,irqc"]
+      '#interrupt-cells': [[0x2]]
+      interrupt-controller: true
+      reg: [[0x0, 0xe61c0000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x0, 0x4, 0x0, 0x1, 0x4, 0x0, 0x2, 0x4, 0x0, 0x3, 0x4, 0x0,
+          0x12, 0x4, 0x0, 0xa1, 0x4]]
+      power-domains: [[0x8, 0x20]]
+      linux,phandle: [[0x21]]
+      phandle: [[0x21]]
+    i2c@e6500000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe6500000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x11f, 0x4]]
+      clocks: [[0xb, 0x1, 0x3a3]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x3a3]]
+      dmas: [[0x1d, 0x91, 0x1d, 0x90, 0x1e, 0x91, 0x1e, 0x90]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6e]]
+      status: ["okay"]
+      clock-frequency: [[0x186a0]]
+    i2c@e6508000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe6508000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x120, 0x4]]
+      clocks: [[0xb, 0x1, 0x3a2]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x3a2]]
+      dmas: [[0x1d, 0x93, 0x1d, 0x92, 0x1e, 0x93, 0x1e, 0x92]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6]]
+      status: ["disabled"]
+    i2c@e6510000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe6510000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x11e, 0x4]]
+      clocks: [[0xb, 0x1, 0x3a1]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x3a1]]
+      dmas: [[0x1d, 0x95, 0x1d, 0x94, 0x1e, 0x95, 0x1e, 0x94]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6]]
+      status: ["disabled"]
+    i2c@e66d0000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe66d0000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x122, 0x4]]
+      clocks: [[0xb, 0x1, 0x3a0]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x3a0]]
+      dmas: [[0x1f, 0x97, 0x1f, 0x96]]
+      dma-names: ["tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6e]]
+      status: ["disabled"]
+    i2c@e66d8000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe66d8000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x13, 0x4]]
+      clocks: [[0xb, 0x1, 0x39f]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x39f]]
+      dmas: [[0x1f, 0x99, 0x1f, 0x98]]
+      dma-names: ["tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6e]]
+      status: ["okay"]
+      clock-frequency: [[0x186a0]]
+    i2c@e66e0000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe66e0000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x14, 0x4]]
+      clocks: [[0xb, 0x1, 0x397]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x397]]
+      dmas: [[0x1f, 0x9b, 0x1f, 0x9a]]
+      dma-names: ["tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6e]]
+      status: ["okay"]
+      clock-frequency: [[0x186a0]]
+      multi-master: true
+      i2c5@10:
+        compatible: ["copro2"]
+        reg: [[0x10]]
+      i2c5@60:
+        compatible: ["mpl3115"]
+        reg: [[0x60]]
+      i2c5@68:
+        compatible: ["max13335"]
+        reg: [[0x68]]
+    i2c@e66e8000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,i2c-r8a7795\0renesas,rcar-gen3-i2c"]
+      reg: [[0x0, 0xe66e8000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x15, 0x4]]
+      clocks: [[0xb, 0x1, 0x396]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x396]]
+      dmas: [[0x1f, 0x9d, 0x1f, 0x9c]]
+      dma-names: ["tx\0rx"]
+      i2c-scl-internal-delay-ns: [[0x6]]
+      status: ["disabled"]
+    i2c@e60b0000:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["renesas,iic-r8a7795\0renesas,rcar-gen3-iic\0renesas,rmobile-iic"]
+      reg: [[0x0, 0xe60b0000, 0x0, 0x425]]
+      interrupts: [[0x0, 0xad, 0x4]]
+      clocks: [[0xb, 0x1, 0x39e]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x39e]]
+      dmas: [[0x1f, 0x11, 0x1f, 0x10]]
+      dma-names: ["tx\0rx"]
+      status: ["okay"]
+      pmic@30:
+        pinctrl-0: [[0x20]]
+        pinctrl-names: ["default"]
+        compatible: ["rohm,bd9571mwv"]
+        reg: [[0x30]]
+        interrupt-parent: [[0x21]]
+        interrupts: [[0x0, 0x8]]
+        interrupt-controller: true
+        '#interrupt-cells': [[0x2]]
+        gpio-controller: true
+        '#gpio-cells': [[0x2]]
+        regulators:
+          dvfs:
+            regulator-name: ["dvfs"]
+            regulator-min-microvolt: [[0xb71b0]]
+            regulator-max-microvolt: [[0xfb770]]
+            regulator-boot-on: true
+            regulator-always-on: true
+            linux,phandle: [[0x14]]
+            phandle: [[0x14]]
+    serial@e6540000:
+      compatible: ["renesas,hscif-r8a7795\0renesas,rcar-gen3-hscif\0renesas,hscif"]
+      reg: [[0x0, 0xe6540000, 0x0, 0x60]]
+      interrupts: [[0x0, 0x9a, 0x4]]
+      clocks: [[0xb, 0x1, 0x208, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1d, 0x31, 0x1d, 0x30, 0x1e, 0x31, 0x1e, 0x30]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x208]]
+      status: ["disabled"]
+    serial@e6550000:
+      compatible: ["renesas,hscif-r8a7795\0renesas,rcar-gen3-hscif\0renesas,hscif"]
+      reg: [[0x0, 0xe6550000, 0x0, 0x60]]
+      interrupts: [[0x0, 0x9b, 0x4]]
+      clocks: [[0xb, 0x1, 0x207, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1d, 0x33, 0x1d, 0x32, 0x1e, 0x33, 0x1e, 0x32]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x207]]
+      status: ["disabled"]
+      pinctrl-0: [[0x23]]
+      pinctrl-names: ["default"]
+      uart-has-rtscts: true
+    serial@e6560000:
+      compatible: ["renesas,hscif-r8a7795\0renesas,rcar-gen3-hscif\0renesas,hscif"]
+      reg: [[0x0, 0xe6560000, 0x0, 0x60]]
+      interrupts: [[0x0, 0x90, 0x4]]
+      clocks: [[0xb, 0x1, 0x206, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1d, 0x35, 0x1d, 0x34, 0x1e, 0x35, 0x1e, 0x34]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x206]]
+      status: ["okay"]
+      pinctrl-0: [[0x24]]
+      pinctrl-names: ["default"]
+    serial@e66a0000:
+      compatible: ["renesas,hscif-r8a7795\0renesas,rcar-gen3-hscif\0renesas,hscif"]
+      reg: [[0x0, 0xe66a0000, 0x0, 0x60]]
+      interrupts: [[0x0, 0x91, 0x4]]
+      clocks: [[0xb, 0x1, 0x205, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1f, 0x37, 0x1f, 0x36]]
+      dma-names: ["tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x205]]
+      status: ["disabled"]
+    serial@e66b0000:
+      compatible: ["renesas,hscif-r8a7795\0renesas,rcar-gen3-hscif\0renesas,hscif"]
+      reg: [[0x0, 0xe66b0000, 0x0, 0x60]]
+      interrupts: [[0x0, 0x92, 0x4]]
+      clocks: [[0xb, 0x1, 0x204, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1f, 0x39, 0x1f, 0x38]]
+      dma-names: ["tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x204]]
+      status: ["disabled"]
+    usb@e6590000:
+      compatible: ["renesas,usbhs-r8a7795\0renesas,rcar-gen3-usbhs"]
+      reg: [[0x0, 0xe6590000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x6b, 0x4]]
+      clocks: [[0xb, 0x1, 0x2c0, 0xb, 0x1, 0x2bf]]
+      dmas: [[0x25, 0x0, 0x25, 0x1, 0x26, 0x0, 0x26, 0x1]]
+      dma-names: ["ch0\0ch1\0ch2\0ch3"]
+      renesas,buswait: [[0xb]]
+      phys: [[0x27]]
+      phy-names: ["usb"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2c0, 0xb, 0x2bf]]
+      status: ["okay"]
+    dma-controller@e65a0000:
+      compatible: ["renesas,r8a7795-usb-dmac\0renesas,usb-dmac"]
+      reg: [[0x0, 0xe65a0000, 0x0, 0x100]]
+      interrupts: [[0x0, 0x6d, 0x4, 0x0, 0x6d, 0x4]]
+      interrupt-names: ["ch0\0ch1"]
+      clocks: [[0xb, 0x1, 0x14a]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x14a]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x2]]
+      linux,phandle: [[0x25]]
+      phandle: [[0x25]]
+    dma-controller@e65b0000:
+      compatible: ["renesas,r8a7795-usb-dmac\0renesas,usb-dmac"]
+      reg: [[0x0, 0xe65b0000, 0x0, 0x100]]
+      interrupts: [[0x0, 0x6e, 0x4, 0x0, 0x6e, 0x4]]
+      interrupt-names: ["ch0\0ch1"]
+      clocks: [[0xb, 0x1, 0x14b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x14b]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x2]]
+      linux,phandle: [[0x26]]
+      phandle: [[0x26]]
+    dma-controller@e6460000:
+      compatible: ["renesas,r8a7795-usb-dmac\0renesas,usb-dmac"]
+      reg: [[0x0, 0xe6460000, 0x0, 0x100]]
+      interrupts: [[0x0, 0x22, 0x4, 0x0, 0x22, 0x4]]
+      interrupt-names: ["ch0\0ch1"]
+      clocks: [[0xb, 0x1, 0x146]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x146]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x2]]
+    dma-controller@e6470000:
+      compatible: ["renesas,r8a7795-usb-dmac\0renesas,usb-dmac"]
+      reg: [[0x0, 0xe6470000, 0x0, 0x100]]
+      interrupts: [[0x0, 0x23, 0x4, 0x0, 0x23, 0x4]]
+      interrupt-names: ["ch0\0ch1"]
+      clocks: [[0xb, 0x1, 0x149]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x149]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x2]]
+    usb-phy@e65ee000:
+      compatible: ["renesas,r8a7795-usb3-phy\0renesas,rcar-gen3-usb3-phy"]
+      reg: [[0x0, 0xe65ee000, 0x0, 0x90]]
+      clocks: [[0xb, 0x1, 0x148, 0x28, 0x29]]
+      clock-names: ["usb3-if\0usb3s_clk\0usb_extal"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x148]]
+      '#phy-cells': [[0x0]]
+      status: ["disabled"]
+    dma-controller@e6700000:
+      compatible: ["renesas,dmac-r8a7795\0renesas,rcar-dmac"]
+      reg: [[0x0, 0xe6700000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0xc7, 0x4, 0x0, 0xc8, 0x4, 0x0, 0xc9, 0x4, 0x0, 0xca, 0x4,
+          0x0, 0xcb, 0x4, 0x0, 0xcc, 0x4, 0x0, 0xcd, 0x4, 0x0, 0xce, 0x4, 0x0, 0xcf,
+          0x4, 0x0, 0xd0, 0x4, 0x0, 0xd1, 0x4, 0x0, 0xd2, 0x4, 0x0, 0xd3, 0x4, 0x0,
+          0xd4, 0x4, 0x0, 0xd5, 0x4, 0x0, 0xd6, 0x4, 0x0, 0xd7, 0x4]]
+      interrupt-names: ["error\0ch0\0ch1\0ch2\0ch3\0ch4\0ch5\0ch6\0ch7\0ch8\0ch9\0ch10\0ch11\0ch12\0ch13\0ch14\0ch15"]
+      clocks: [[0xb, 0x1, 0xdb]]
+      clock-names: ["fck"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xdb]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x10]]
+      iommus: [[0x2a, 0x0, 0x2a, 0x1, 0x2a, 0x2, 0x2a, 0x3, 0x2a, 0x4, 0x2a, 0x5,
+          0x2a, 0x6, 0x2a, 0x7, 0x2a, 0x8, 0x2a, 0x9, 0x2a, 0xa, 0x2a, 0xb, 0x2a,
+          0xc, 0x2a, 0xd, 0x2a, 0xe, 0x2a, 0xf]]
+      linux,phandle: [[0x1f]]
+      phandle: [[0x1f]]
+    dma-controller@e7300000:
+      compatible: ["renesas,dmac-r8a7795\0renesas,rcar-dmac"]
+      reg: [[0x0, 0xe7300000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0xdc, 0x4, 0x0, 0xd8, 0x4, 0x0, 0xd9, 0x4, 0x0, 0xda, 0x4,
+          0x0, 0xdb, 0x4, 0x0, 0x134, 0x4, 0x0, 0x135, 0x4, 0x0, 0x136, 0x4, 0x0,
+          0x137, 0x4, 0x0, 0x138, 0x4, 0x0, 0x139, 0x4, 0x0, 0x13a, 0x4, 0x0, 0x13b,
+          0x4, 0x0, 0x13c, 0x4, 0x0, 0x13d, 0x4, 0x0, 0x13e, 0x4, 0x0, 0x13f, 0x4]]
+      interrupt-names: ["error\0ch0\0ch1\0ch2\0ch3\0ch4\0ch5\0ch6\0ch7\0ch8\0ch9\0ch10\0ch11\0ch12\0ch13\0ch14\0ch15"]
+      clocks: [[0xb, 0x1, 0xda]]
+      clock-names: ["fck"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xda]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x10]]
+      iommus: [[0x2b, 0x0, 0x2b, 0x1, 0x2b, 0x2, 0x2b, 0x3, 0x2b, 0x4, 0x2b, 0x5,
+          0x2b, 0x6, 0x2b, 0x7, 0x2b, 0x8, 0x2b, 0x9, 0x2b, 0xa, 0x2b, 0xb, 0x2b,
+          0xc, 0x2b, 0xd, 0x2b, 0xe, 0x2b, 0xf]]
+      linux,phandle: [[0x1d]]
+      phandle: [[0x1d]]
+    dma-controller@e7310000:
+      compatible: ["renesas,dmac-r8a7795\0renesas,rcar-dmac"]
+      reg: [[0x0, 0xe7310000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0x1a0, 0x4, 0x0, 0x1a1, 0x4, 0x0, 0x1a2, 0x4, 0x0, 0x1a3,
+          0x4, 0x0, 0x1a4, 0x4, 0x0, 0x1a5, 0x4, 0x0, 0x1a6, 0x4, 0x0, 0x1a7, 0x4,
+          0x0, 0x1a8, 0x4, 0x0, 0x1a9, 0x4, 0x0, 0x1aa, 0x4, 0x0, 0x1ab, 0x4, 0x0,
+          0x1ac, 0x4, 0x0, 0x1ad, 0x4, 0x0, 0x1ae, 0x4, 0x0, 0x1af, 0x4, 0x0, 0x18d,
+          0x4]]
+      interrupt-names: ["error\0ch0\0ch1\0ch2\0ch3\0ch4\0ch5\0ch6\0ch7\0ch8\0ch9\0ch10\0ch11\0ch12\0ch13\0ch14\0ch15"]
+      clocks: [[0xb, 0x1, 0xd9]]
+      clock-names: ["fck"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xd9]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x10]]
+      iommus: [[0x2b, 0x10, 0x2b, 0x11, 0x2b, 0x12, 0x2b, 0x13, 0x2b, 0x14, 0x2b,
+          0x15, 0x2b, 0x16, 0x2b, 0x17, 0x2b, 0x18, 0x2b, 0x19, 0x2b, 0x1a, 0x2b,
+          0x1b, 0x2b, 0x1c, 0x2b, 0x1d, 0x2b, 0x1e, 0x2b, 0x1f]]
+      linux,phandle: [[0x1e]]
+      phandle: [[0x1e]]
+    mmu@e67b0000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xe67b0000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xc4, 0x4, 0x0, 0xc5, 0x4]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+      linux,phandle: [[0x2c]]
+      phandle: [[0x2c]]
+    mmu@e6740000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xe6740000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x0]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+      linux,phandle: [[0x2a]]
+      phandle: [[0x2a]]
+    mmu@e7740000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xe7740000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x1]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+      linux,phandle: [[0x2b]]
+      phandle: [[0x2b]]
+    mmu@e6570000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xe6570000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x2]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@ff8b0000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xff8b0000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x3]]
+      power-domains: [[0x8, 0x18]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@ec670000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xec670000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x4]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+      linux,phandle: [[0x56]]
+      phandle: [[0x56]]
+    mmu@fd800000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xfd800000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x6]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fd950000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xfd950000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x7]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fd960000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xfd960000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x8]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fd970000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xfd970000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x9]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@ffc80000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xffc80000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0xa]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fe6b0000:
+      compatible: ["renesas,ipmmu-mmu-r8a7795"]
+      reg: [[0x0, 0xfe6b0000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0xc]]
+      power-domains: [[0x8, 0xe]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fe6f0000:
+      compatible: ["renesas,ipmmu-mmu-r8a7795"]
+      reg: [[0x0, 0xfe6f0000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0xd]]
+      power-domains: [[0x8, 0xe]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@febd0000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xfebd0000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0xe]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@febe0000:
+      compatible: ["renesas,ipmmu-r8a7795"]
+      reg: [[0x0, 0xfebe0000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0xf]]
+      power-domains: [[0x8, 0x20]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fe990000:
+      compatible: ["renesas,ipmmu-mmu-r8a7795"]
+      reg: [[0x0, 0xfe990000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x10]]
+      power-domains: [[0x8, 0x9]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    mmu@fe980000:
+      compatible: ["renesas,ipmmu-mmu-r8a7795"]
+      reg: [[0x0, 0xfe980000, 0x0, 0x1000]]
+      renesas,ipmmu-main: [[0x2c, 0x11]]
+      power-domains: [[0x8, 0x9]]
+      '#iommu-cells': [[0x1]]
+      status: ["disabled"]
+    qos@e67e0000:
+      compatible: ["renesas,qos"]
+      reg: [[0x0, 0xe67e0000, 0x0, 0x10090]]
+    ethernet@e6800000:
+      compatible: ["renesas,etheravb-r8a7795\0renesas,etheravb-rcar-gen3"]
+      reg: [[0x0, 0xe6800000, 0x0, 0x800, 0x0, 0xe6a00000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0x27, 0x4, 0x0, 0x28, 0x4, 0x0, 0x29, 0x4, 0x0, 0x2a, 0x4,
+          0x0, 0x2b, 0x4, 0x0, 0x2c, 0x4, 0x0, 0x2d, 0x4, 0x0, 0x2e, 0x4, 0x0, 0x2f,
+          0x4, 0x0, 0x30, 0x4, 0x0, 0x31, 0x4, 0x0, 0x32, 0x4, 0x0, 0x33, 0x4, 0x0,
+          0x34, 0x4, 0x0, 0x35, 0x4, 0x0, 0x36, 0x4, 0x0, 0x37, 0x4, 0x0, 0x38, 0x4,
+          0x0, 0x39, 0x4, 0x0, 0x3a, 0x4, 0x0, 0x3b, 0x4, 0x0, 0x3c, 0x4, 0x0, 0x3d,
+          0x4, 0x0, 0x3e, 0x4, 0x0, 0x3f, 0x4]]
+      interrupt-names: ["ch0\0ch1\0ch2\0ch3\0ch4\0ch5\0ch6\0ch7\0ch8\0ch9\0ch10\0ch11\0ch12\0ch13\0ch14\0ch15\0ch16\0ch17\0ch18\0ch19\0ch20\0ch21\0ch22\0ch23\0ch24"]
+      clocks: [[0xb, 0x1, 0x32c]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x32c]]
+      phy-mode: ["rgmii-id"]
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      status: ["disabled"]
+      pinctrl-0: [[0x2d]]
+      pinctrl-names: ["default"]
+      renesas,no-ether-link: true
+      phy-handle: [[0x2e]]
+      dummy_phy:
+        compatible: ["ethernet-phy-idFFFF.FFFE"]
+        reg: [[0x0]]
+        linux,phandle: [[0x2e]]
+        phandle: [[0x2e]]
+      tja1102@4:
+        compatible: ["nxp,tja1102"]
+        reg: [[0x4]]
+      tja1102@8:
+        compatible: ["nxp,tja1102"]
+        reg: [[0x8]]
+    can@e6c30000:
+      compatible: ["renesas,can-r8a7795\0renesas,rcar-gen3-can"]
+      reg: [[0x0, 0xe6c30000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xba, 0x4]]
+      clocks: [[0xb, 0x1, 0x394, 0xb, 0x0, 0x27, 0x2f]]
+      clock-names: ["clkp1\0clkp2\0can_clk"]
+      assigned-clocks: [[0xb, 0x0, 0x27]]
+      assigned-clock-rates: [[0x2625a00]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x394]]
+      status: ["disabled"]
+    can@e6c38000:
+      compatible: ["renesas,can-r8a7795\0renesas,rcar-gen3-can"]
+      reg: [[0x0, 0xe6c38000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xbb, 0x4]]
+      clocks: [[0xb, 0x1, 0x393, 0xb, 0x0, 0x27, 0x2f]]
+      clock-names: ["clkp1\0clkp2\0can_clk"]
+      assigned-clocks: [[0xb, 0x0, 0x27]]
+      assigned-clock-rates: [[0x2625a00]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x393]]
+      status: ["disabled"]
+    can@e66c0000:
+      compatible: ["renesas,r8a7795-canfd\0renesas,rcar-gen3-canfd"]
+      reg: [[0x0, 0xe66c0000, 0x0, 0x8000]]
+      interrupts: [[0x0, 0x1d, 0x4, 0x0, 0x1e, 0x4]]
+      clocks: [[0xb, 0x1, 0x392, 0xb, 0x0, 0x27, 0x2f]]
+      clock-names: ["fck\0canfd\0can_clk"]
+      assigned-clocks: [[0xb, 0x0, 0x27]]
+      assigned-clock-rates: [[0x2625a00]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x392]]
+      status: ["disabled"]
+      channel0:
+        status: ["disabled"]
+      channel1:
+        status: ["disabled"]
+    pwm@e6e30000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e30000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    pwm@e6e31000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e31000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    pwm@e6e32000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e32000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    pwm@e6e33000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e33000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    pwm@e6e34000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e34000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    pwm@e6e35000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e35000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    pwm@e6e36000:
+      compatible: ["renesas,pwm-r8a7795\0renesas,pwm-rcar"]
+      reg: [[0x0, 0xe6e36000, 0x0, 0x8]]
+      clocks: [[0xb, 0x1, 0x20b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x20b]]
+      '#pwm-cells': [[0x2]]
+      status: ["disabled"]
+    serial@e6e60000:
+      compatible: ["renesas,scif-r8a7795\0renesas,rcar-gen3-scif\0renesas,scif"]
+      reg: [[0x0, 0xe6e60000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x98, 0x4]]
+      clocks: [[0xb, 0x1, 0xcf, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1d, 0x51, 0x1d, 0x50, 0x1e, 0x51, 0x1e, 0x50]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xcf]]
+      status: ["disabled"]
+      pinctrl-0: [[0x30]]
+      pinctrl-names: ["default"]
+      uart-has-rtscts: true
+    serial@e6e68000:
+      compatible: ["renesas,scif-r8a7795\0renesas,rcar-gen3-scif\0renesas,scif"]
+      reg: [[0x0, 0xe6e68000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x99, 0x4]]
+      clocks: [[0xb, 0x1, 0xce, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1d, 0x53, 0x1d, 0x52, 0x1e, 0x53, 0x1e, 0x52]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xce]]
+      status: ["disabled"]
+    serial@e6e88000:
+      compatible: ["renesas,scif-r8a7795\0renesas,rcar-gen3-scif\0renesas,scif"]
+      reg: [[0x0, 0xe6e88000, 0x0, 0x40]]
+      interrupts: [[0x0, 0xa4, 0x4]]
+      clocks: [[0xb, 0x1, 0x136, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x136]]
+      status: ["disabled"]
+    serial@e6c50000:
+      compatible: ["renesas,scif-r8a7795\0renesas,rcar-gen3-scif\0renesas,scif"]
+      reg: [[0x0, 0xe6c50000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x17, 0x4]]
+      clocks: [[0xb, 0x1, 0xcc, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1f, 0x57, 0x1f, 0x56]]
+      dma-names: ["tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xcc]]
+      status: ["disabled"]
+    serial@e6c40000:
+      compatible: ["renesas,scif-r8a7795\0renesas,rcar-gen3-scif\0renesas,scif"]
+      reg: [[0x0, 0xe6c40000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x10, 0x4]]
+      clocks: [[0xb, 0x1, 0xcb, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1f, 0x59, 0x1f, 0x58]]
+      dma-names: ["tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xcb]]
+      status: ["disabled"]
+    serial@e6f30000:
+      compatible: ["renesas,scif-r8a7795\0renesas,rcar-gen3-scif\0renesas,scif"]
+      reg: [[0x0, 0xe6f30000, 0x0, 0x40]]
+      interrupts: [[0x0, 0x11, 0x4]]
+      clocks: [[0xb, 0x1, 0xca, 0xb, 0x0, 0x10, 0x22]]
+      clock-names: ["fck\0brg_int\0scif_clk"]
+      dmas: [[0x1d, 0x5b, 0x1d, 0x5a, 0x1e, 0x5b, 0x1e, 0x5a]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xca]]
+      status: ["disabled"]
+    spi@e6e90000:
+      compatible: ["renesas,msiof-r8a7795\0renesas,rcar-gen3-msiof"]
+      reg: [[0x0, 0xe6e90000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x9c, 0x4]]
+      clocks: [[0xb, 0x1, 0xd3, 0x31]]
+      clock-names: ["msiof_clk\0msiof_ref_clk"]
+      dmas: [[0x1d, 0x41, 0x1d, 0x40, 0x1e, 0x41, 0x1e, 0x40]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xd3]]
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      status: ["disabled"]
+    spi@e6ea0000:
+      compatible: ["renesas,msiof-r8a7795\0renesas,rcar-gen3-msiof"]
+      reg: [[0x0, 0xe6ea0000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x9d, 0x4]]
+      clocks: [[0xb, 0x1, 0xd2, 0x31]]
+      clock-names: ["msiof_clk\0msiof_ref_clk"]
+      dmas: [[0x1d, 0x43, 0x1d, 0x42, 0x1e, 0x43, 0x1e, 0x42]]
+      dma-names: ["tx\0rx\0tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xd2]]
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      status: ["okay"]
+      pinctrl-0: [[0x32]]
+      pinctrl-names: ["default"]
+      cs-gpios: [[0x0, 0x33, 0x8, 0x1]]
+      num-cs: [[0x2]]
+      spidev@0:
+        compatible: ["renesas,sh-msiof"]
+        reg: [[0x1]]
+        spi-max-frequency: [[0x989680]]
+    spi@e6c00000:
+      compatible: ["renesas,msiof-r8a7795\0renesas,rcar-gen3-msiof"]
+      reg: [[0x0, 0xe6c00000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x9e, 0x4]]
+      clocks: [[0xb, 0x1, 0xd1, 0x31]]
+      clock-names: ["msiof_clk\0msiof_ref_clk"]
+      dmas: [[0x1f, 0x45, 0x1f, 0x44]]
+      dma-names: ["tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xd1]]
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      status: ["okay"]
+      pinctrl-0: [[0x34]]
+      pinctrl-names: ["default"]
+      cs-gpios: [[0x0, 0x35, 0x6, 0x1]]
+      num-cs: [[0x3]]
+      renesas,dtdl: [[0xc8]]
+      spidev@0:
+        compatible: ["renesas,sh-msiof"]
+        reg: [[0x1]]
+        spi-max-frequency: [[0x1fca055]]
+      spidev@1:
+        compatible: ["renesas,sh-msiof"]
+        reg: [[0x2]]
+        spi-max-frequency: [[0x1fca055]]
+    spi@e6c10000:
+      compatible: ["renesas,msiof-r8a7795\0renesas,rcar-gen3-msiof"]
+      reg: [[0x0, 0xe6c10000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x9f, 0x4]]
+      clocks: [[0xb, 0x1, 0xd0, 0x31]]
+      clock-names: ["msiof_clk\0msiof_ref_clk"]
+      dmas: [[0x1f, 0x47, 0x1f, 0x46]]
+      dma-names: ["tx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0xd0]]
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      status: ["okay"]
+      pinctrl-0: [[0x36]]
+      pinctrl-names: ["default"]
+      num-cs: [[0x3]]
+      renesas,dtdl: [[0xc8]]
+      spidev@0:
+        compatible: ["renesas,sh-msiof"]
+        reg: [[0x1]]
+        spi-max-frequency: [[0x1fca055]]
+      spidev@1:
+        compatible: ["nxp,sja1105"]
+        reg: [[0x2]]
+        spi-max-frequency: [[0x3f940aa]]
+        spi-cpha: true
+        renesas,dtdl: [[0xc8]]
+        renesas,syncdl: [[0x12c]]
+    video@e6ef0000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef0000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xbc, 0x4]]
+      clocks: [[0xb, 0x1, 0x32b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x32b]]
+      renesas,id: [[0x0]]
+      status: ["okay"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x37]]
+            linux,phandle: [[0x6e]]
+            phandle: [[0x6e]]
+          endpoint@2:
+            reg: [[0x2]]
+            remote-endpoint: [[0x38]]
+            linux,phandle: [[0x76]]
+            phandle: [[0x76]]
+    video@e6ef1000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef1000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xbd, 0x4]]
+      clocks: [[0xb, 0x1, 0x32a]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x32a]]
+      renesas,id: [[0x1]]
+      status: ["okay"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x39]]
+            linux,phandle: [[0x6f]]
+            phandle: [[0x6f]]
+          endpoint@2:
+            reg: [[0x2]]
+            remote-endpoint: [[0x3a]]
+            linux,phandle: [[0x77]]
+            phandle: [[0x77]]
+    video@e6ef2000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef2000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xbe, 0x4]]
+      clocks: [[0xb, 0x1, 0x329]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x329]]
+      renesas,id: [[0x2]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x3b]]
+            linux,phandle: [[0x70]]
+            phandle: [[0x70]]
+          endpoint@2:
+            reg: [[0x2]]
+            remote-endpoint: [[0x3c]]
+            linux,phandle: [[0x78]]
+            phandle: [[0x78]]
+    video@e6ef3000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef3000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xbf, 0x4]]
+      clocks: [[0xb, 0x1, 0x328]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x328]]
+      renesas,id: [[0x3]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x3d]]
+            linux,phandle: [[0x71]]
+            phandle: [[0x71]]
+          endpoint@2:
+            reg: [[0x2]]
+            remote-endpoint: [[0x3e]]
+            linux,phandle: [[0x79]]
+            phandle: [[0x79]]
+    video@e6ef4000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef4000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xae, 0x4]]
+      clocks: [[0xb, 0x1, 0x327]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x327]]
+      renesas,id: [[0x4]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x3f]]
+            linux,phandle: [[0x72]]
+            phandle: [[0x72]]
+    video@e6ef5000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef5000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xaf, 0x4]]
+      clocks: [[0xb, 0x1, 0x326]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x326]]
+      renesas,id: [[0x5]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x40]]
+            linux,phandle: [[0x73]]
+            phandle: [[0x73]]
+    video@e6ef6000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef6000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xb0, 0x4]]
+      clocks: [[0xb, 0x1, 0x325]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x325]]
+      renesas,id: [[0x6]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x41]]
+            linux,phandle: [[0x74]]
+            phandle: [[0x74]]
+    video@e6ef7000:
+      compatible: ["renesas,vin-r8a7795"]
+      reg: [[0x0, 0xe6ef7000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0xab, 0x4]]
+      clocks: [[0xb, 0x1, 0x324]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x324]]
+      renesas,id: [[0x7]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x42]]
+            linux,phandle: [[0x75]]
+            phandle: [[0x75]]
+    rif@e6f40000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6f40000, 0x0, 0x64]]
+      interrupts: [[0x0, 0xc, 0x4]]
+      clocks: [[0xb, 0x1, 0x203]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x20, 0x1e, 0x20]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x203]]
+      renesas,bonding: [[0x43]]
+      status: ["disabled"]
+      linux,phandle: [[0x44]]
+      phandle: [[0x44]]
+    rif@e6f50000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6f50000, 0x0, 0x64]]
+      interrupts: [[0x0, 0xd, 0x4]]
+      clocks: [[0xb, 0x1, 0x202]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x22, 0x1e, 0x22]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x202]]
+      renesas,bonding: [[0x44]]
+      status: ["disabled"]
+      linux,phandle: [[0x43]]
+      phandle: [[0x43]]
+    rif@e6f60000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6f60000, 0x0, 0x64]]
+      interrupts: [[0x0, 0xe, 0x4]]
+      clocks: [[0xb, 0x1, 0x201]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x24, 0x1e, 0x24]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x201]]
+      renesas,bonding: [[0x45]]
+      status: ["disabled"]
+      linux,phandle: [[0x46]]
+      phandle: [[0x46]]
+    rif@e6f70000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6f70000, 0x0, 0x64]]
+      interrupts: [[0x0, 0xf, 0x4]]
+      clocks: [[0xb, 0x1, 0x200]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x26, 0x1e, 0x26]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x200]]
+      renesas,bonding: [[0x46]]
+      status: ["disabled"]
+      linux,phandle: [[0x45]]
+      phandle: [[0x45]]
+    rif@e6f80000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6f80000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x18, 0x4]]
+      clocks: [[0xb, 0x1, 0x1ff]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x28, 0x1e, 0x28]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1ff]]
+      renesas,bonding: [[0x47]]
+      status: ["disabled"]
+      linux,phandle: [[0x48]]
+      phandle: [[0x48]]
+    rif@e6f90000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6f90000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x19, 0x4]]
+      clocks: [[0xb, 0x1, 0x1fe]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x2a, 0x1e, 0x2a]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1fe]]
+      renesas,bonding: [[0x48]]
+      status: ["disabled"]
+      linux,phandle: [[0x47]]
+      phandle: [[0x47]]
+    rif@e6fa0000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6fa0000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x1a, 0x4]]
+      clocks: [[0xb, 0x1, 0x1fd]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x2c, 0x1e, 0x2c]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1fd]]
+      renesas,bonding: [[0x49]]
+      status: ["disabled"]
+      linux,phandle: [[0x4a]]
+      phandle: [[0x4a]]
+    rif@e6fb0000:
+      compatible: ["renesas,r8a7795-drif\0renesas,rcar-gen3-drif"]
+      reg: [[0x0, 0xe6fb0000, 0x0, 0x64]]
+      interrupts: [[0x0, 0x1b, 0x4]]
+      clocks: [[0xb, 0x1, 0x1fc]]
+      clock-names: ["fck"]
+      dmas: [[0x1d, 0x2e, 0x1e, 0x2e]]
+      dma-names: ["rx\0rx"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1fc]]
+      renesas,bonding: [[0x4a]]
+      status: ["disabled"]
+      linux,phandle: [[0x49]]
+      phandle: [[0x49]]
+    sound@ec500000:
+      compatible: ["renesas,rcar_sound-r8a7795\0renesas,rcar_sound-gen3"]
+      reg: [[0x0, 0xec500000, 0x0, 0x1000, 0x0, 0xec5a0000, 0x0, 0x100, 0x0, 0xec540000,
+          0x0, 0x1000, 0x0, 0xec541000, 0x0, 0x280, 0x0, 0xec740000, 0x0, 0x200]]
+      reg-names: ["scu\0adg\0ssiu\0ssi\0audmapp"]
+      clocks: [[0xb, 0x1, 0x3ed, 0xb, 0x1, 0x3ee, 0xb, 0x1, 0x3ef, 0xb, 0x1, 0x3f0,
+          0xb, 0x1, 0x3f1, 0xb, 0x1, 0x3f2, 0xb, 0x1, 0x3f3, 0xb, 0x1, 0x3f4, 0xb,
+          0x1, 0x3f5, 0xb, 0x1, 0x3f6, 0xb, 0x1, 0x3f7, 0xb, 0x1, 0x3fe, 0xb, 0x1,
+          0x3ff, 0xb, 0x1, 0x400, 0xb, 0x1, 0x401, 0xb, 0x1, 0x402, 0xb, 0x1, 0x403,
+          0xb, 0x1, 0x404, 0xb, 0x1, 0x405, 0xb, 0x1, 0x406, 0xb, 0x1, 0x407, 0xb,
+          0x1, 0x3fc, 0xb, 0x1, 0x3fd, 0xb, 0x1, 0x3fc, 0xb, 0x1, 0x3fd, 0xb, 0x1,
+          0x3fb, 0xb, 0x1, 0x3fa, 0x4b, 0x4c, 0x4d, 0xb, 0x0, 0x9]]
+      clock-names: ["ssi-all\0ssi.9\0ssi.8\0ssi.7\0ssi.6\0ssi.5\0ssi.4\0ssi.3\0ssi.2\0ssi.1\0ssi.0\0src.9\0src.8\0src.7\0src.6\0src.5\0src.4\0src.3\0src.2\0src.1\0src.0\0mix.1\0mix.0\0ctu.1\0ctu.0\0dvc.0\0dvc.1\0clk_a\0clk_b\0clk_c\0clk_i"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x3ed, 0xb, 0x3ee, 0xb, 0x3ef, 0xb, 0x3f0, 0xb, 0x3f1, 0xb, 0x3f2,
+          0xb, 0x3f3, 0xb, 0x3f4, 0xb, 0x3f5, 0xb, 0x3f6, 0xb, 0x3f7]]
+      reset-names: ["ssi-all\0ssi.9\0ssi.8\0ssi.7\0ssi.6\0ssi.5\0ssi.4\0ssi.3\0ssi.2\0ssi.1\0ssi.0"]
+      status: ["okay"]
+      pinctrl-0: [[0x4e, 0x4f]]
+      pinctrl-names: ["default"]
+      '#sound-dai-cells': [[0x1]]
+      '#clock-cells': [[0x1]]
+      clkout-lr-synchronous: true
+      clock-frequency: [[0x5dc000]]
+      linux,phandle: [[0x89]]
+      phandle: [[0x89]]
+      rcar_sound,dvc:
+        dvc-0:
+          dmas: [[0x50, 0xbc]]
+          dma-names: ["tx"]
+        dvc-1:
+          dmas: [[0x50, 0xbe]]
+          dma-names: ["tx"]
+      rcar_sound,mix:
+        mix-0: {}
+        mix-1: {}
+      rcar_sound,ctu:
+        ctu-0: {}
+        ctu-1: {}
+        ctu-2: {}
+        ctu-3: {}
+        ctu-4: {}
+        ctu-5: {}
+        ctu-6: {}
+        ctu-7: {}
+      rcar_sound,src:
+        src-0:
+          interrupts: [[0x0, 0x160, 0x4]]
+          dmas: [[0x51, 0x85, 0x50, 0x9a]]
+          dma-names: ["rx\0tx"]
+        src-1:
+          interrupts: [[0x0, 0x161, 0x4]]
+          dmas: [[0x51, 0x87, 0x50, 0x9c]]
+          dma-names: ["rx\0tx"]
+        src-2:
+          interrupts: [[0x0, 0x162, 0x4]]
+          dmas: [[0x51, 0x89, 0x50, 0x9e]]
+          dma-names: ["rx\0tx"]
+        src-3:
+          interrupts: [[0x0, 0x163, 0x4]]
+          dmas: [[0x51, 0x8b, 0x50, 0xa0]]
+          dma-names: ["rx\0tx"]
+        src-4:
+          interrupts: [[0x0, 0x164, 0x4]]
+          dmas: [[0x51, 0x8d, 0x50, 0xb0]]
+          dma-names: ["rx\0tx"]
+        src-5:
+          interrupts: [[0x0, 0x165, 0x4]]
+          dmas: [[0x51, 0x8f, 0x50, 0xb2]]
+          dma-names: ["rx\0tx"]
+        src-6:
+          interrupts: [[0x0, 0x166, 0x4]]
+          dmas: [[0x51, 0x91, 0x50, 0xb4]]
+          dma-names: ["rx\0tx"]
+        src-7:
+          interrupts: [[0x0, 0x167, 0x4]]
+          dmas: [[0x51, 0x93, 0x50, 0xb6]]
+          dma-names: ["rx\0tx"]
+        src-8:
+          interrupts: [[0x0, 0x168, 0x4]]
+          dmas: [[0x51, 0x95, 0x50, 0xb8]]
+          dma-names: ["rx\0tx"]
+        src-9:
+          interrupts: [[0x0, 0x169, 0x4]]
+          dmas: [[0x51, 0x97, 0x50, 0xba]]
+          dma-names: ["rx\0tx"]
+      rcar_sound,ssi:
+        ssi-0:
+          interrupts: [[0x0, 0x172, 0x4]]
+          dmas: [[0x51, 0x1, 0x50, 0x2, 0x51, 0x15, 0x50, 0x16]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+        ssi-1:
+          interrupts: [[0x0, 0x173, 0x4]]
+          dmas: [[0x51, 0x3, 0x50, 0x4, 0x51, 0x49, 0x50, 0x4a]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+          shared-pin: true
+          linux,phandle: [[0x54]]
+          phandle: [[0x54]]
+        ssi-2:
+          interrupts: [[0x0, 0x174, 0x4]]
+          dmas: [[0x51, 0x5, 0x50, 0x6, 0x51, 0x63, 0x50, 0x64]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+          shared-pin: true
+          linux,phandle: [[0x55]]
+          phandle: [[0x55]]
+        ssi-3:
+          interrupts: [[0x0, 0x175, 0x4]]
+          dmas: [[0x51, 0x7, 0x50, 0x8, 0x51, 0x6f, 0x50, 0x70]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+        ssi-4:
+          interrupts: [[0x0, 0x176, 0x4]]
+          dmas: [[0x51, 0x9, 0x50, 0xa, 0x51, 0x71, 0x50, 0x72]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+        ssi-5:
+          interrupts: [[0x0, 0x177, 0x4]]
+          dmas: [[0x51, 0xb, 0x50, 0xc, 0x51, 0x73, 0x50, 0x74]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+        ssi-6:
+          interrupts: [[0x0, 0x178, 0x4]]
+          dmas: [[0x51, 0xd, 0x50, 0xe, 0x51, 0x75, 0x50, 0x76]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+          linux,phandle: [[0x53]]
+          phandle: [[0x53]]
+        ssi-7:
+          interrupts: [[0x0, 0x179, 0x4]]
+          dmas: [[0x51, 0xf, 0x50, 0x10, 0x51, 0x79, 0x50, 0x7a]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+          linux,phandle: [[0x52]]
+          phandle: [[0x52]]
+        ssi-8:
+          interrupts: [[0x0, 0x17a, 0x4]]
+          dmas: [[0x51, 0x11, 0x50, 0x12, 0x51, 0x7b, 0x50, 0x7c]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+        ssi-9:
+          interrupts: [[0x0, 0x17b, 0x4]]
+          dmas: [[0x51, 0x13, 0x50, 0x14, 0x51, 0x7d, 0x50, 0x7e]]
+          dma-names: ["rx\0tx\0rxu\0txu"]
+      rcar_sound,dai:
+        dai0:
+          capture: [[0x52]]
+        dai1:
+          capture: [[0x53]]
+        dai2:
+          playback: [[0x54]]
+          capture: [[0x55]]
+    dma-controller@ec700000:
+      compatible: ["renesas,dmac-r8a7795\0renesas,rcar-dmac"]
+      reg: [[0x0, 0xec700000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0x15e, 0x4, 0x0, 0x140, 0x4, 0x0, 0x141, 0x4, 0x0, 0x142,
+          0x4, 0x0, 0x143, 0x4, 0x0, 0x144, 0x4, 0x0, 0x145, 0x4, 0x0, 0x146, 0x4,
+          0x0, 0x147, 0x4, 0x0, 0x148, 0x4, 0x0, 0x149, 0x4, 0x0, 0x14a, 0x4, 0x0,
+          0x14b, 0x4, 0x0, 0x14c, 0x4, 0x0, 0x14d, 0x4, 0x0, 0x14e, 0x4, 0x0, 0x14f,
+          0x4]]
+      interrupt-names: ["error\0ch0\0ch1\0ch2\0ch3\0ch4\0ch5\0ch6\0ch7\0ch8\0ch9\0ch10\0ch11\0ch12\0ch13\0ch14\0ch15"]
+      clocks: [[0xb, 0x1, 0x1f6]]
+      clock-names: ["fck"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1f6]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x10]]
+      iommus: [[0x56, 0x0, 0x56, 0x1, 0x56, 0x2, 0x56, 0x3, 0x56, 0x4, 0x56, 0x5,
+          0x56, 0x6, 0x56, 0x7, 0x56, 0x8, 0x56, 0x9, 0x56, 0xa, 0x56, 0xb, 0x56,
+          0xc, 0x56, 0xd, 0x56, 0xe, 0x56, 0xf]]
+      linux,phandle: [[0x51]]
+      phandle: [[0x51]]
+    dma-controller@ec720000:
+      compatible: ["renesas,dmac-r8a7795\0renesas,rcar-dmac"]
+      reg: [[0x0, 0xec720000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0x15f, 0x4, 0x0, 0x150, 0x4, 0x0, 0x151, 0x4, 0x0, 0x152,
+          0x4, 0x0, 0x153, 0x4, 0x0, 0x154, 0x4, 0x0, 0x155, 0x4, 0x0, 0x156, 0x4,
+          0x0, 0x157, 0x4, 0x0, 0x158, 0x4, 0x0, 0x159, 0x4, 0x0, 0x15a, 0x4, 0x0,
+          0x15b, 0x4, 0x0, 0x15c, 0x4, 0x0, 0x15d, 0x4, 0x0, 0x17e, 0x4, 0x0, 0x17f,
+          0x4]]
+      interrupt-names: ["error\0ch0\0ch1\0ch2\0ch3\0ch4\0ch5\0ch6\0ch7\0ch8\0ch9\0ch10\0ch11\0ch12\0ch13\0ch14\0ch15"]
+      clocks: [[0xb, 0x1, 0x1f5]]
+      clock-names: ["fck"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1f5]]
+      '#dma-cells': [[0x1]]
+      dma-channels: [[0x10]]
+      iommus: [[0x56, 0x10, 0x56, 0x11, 0x56, 0x12, 0x56, 0x13, 0x56, 0x14, 0x56,
+          0x15, 0x56, 0x16, 0x56, 0x17, 0x56, 0x18, 0x56, 0x19, 0x56, 0x1a, 0x56,
+          0x1b, 0x56, 0x1c, 0x56, 0x1d, 0x56, 0x1e, 0x56, 0x1f]]
+      linux,phandle: [[0x50]]
+      phandle: [[0x50]]
+    adsp@ec800000:
+      compatible: ["renesas,r8a7795-adsp\0renesas,rcar-gen3-adsp"]
+      reg: [[0x0, 0xec800000, 0x0, 0x80fc, 0x0, 0xece60000, 0x0, 0x10000, 0x0, 0xece78000,
+          0x0, 0x8000, 0x0, 0xece80000, 0x0, 0x10000, 0x0, 0xece90000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0xed, 0x4]]
+      clocks: [[0xb, 0x1, 0x1fa, 0xb, 0x1, 0x3ed, 0xb, 0x1, 0x3ee, 0xb, 0x1, 0x3ef,
+          0xb, 0x1, 0x3f0, 0xb, 0x1, 0x3f1, 0xb, 0x1, 0x3f2, 0xb, 0x1, 0x3f3, 0xb,
+          0x1, 0x3f4, 0xb, 0x1, 0x3f5, 0xb, 0x1, 0x3f6, 0xb, 0x1, 0x3f7, 0xb, 0x1,
+          0x3fe, 0xb, 0x1, 0x3ff, 0xb, 0x1, 0x400, 0xb, 0x1, 0x401, 0xb, 0x1, 0x402,
+          0xb, 0x1, 0x403, 0xb, 0x1, 0x404, 0xb, 0x1, 0x405, 0xb, 0x1, 0x406, 0xb,
+          0x1, 0x407, 0xb, 0x1, 0x3fc, 0xb, 0x1, 0x3fd, 0xb, 0x1, 0x3fc, 0xb, 0x1,
+          0x3fd, 0xb, 0x1, 0x3fb, 0xb, 0x1, 0x3fa, 0xb, 0x1, 0x1f5, 0xb, 0x1, 0x1f6,
+          0xb, 0x1, 0x39a]]
+      clock-names: ["adsp\0ssi-all\0ssi.9\0ssi.8\0ssi.7\0ssi.6\0ssi.5\0ssi.4\0ssi.3\0ssi.2\0ssi.1\0ssi.0\0src.9\0src.8\0src.7\0src.6\0src.5\0src.4\0src.3\0src.2\0src.1\0src.0\0mix.1\0mix.0\0ctu.1\0ctu.0\0dvc.0\0dvc.1\0audmac.1\0audmac.0\0adg"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x1fa, 0xb, 0x3ed, 0xb, 0x3ee, 0xb, 0x3ef, 0xb, 0x3f0, 0xb, 0x3f1,
+          0xb, 0x3f2, 0xb, 0x3f3, 0xb, 0x3f4, 0xb, 0x3f5, 0xb, 0x3f6, 0xb, 0x3f7,
+          0xb, 0x1f5, 0xb, 0x1f6, 0xb, 0x39a]]
+      reset-names: ["adsp\0ssi-all\0ssi.9\0ssi.8\0ssi.7\0ssi.6\0ssi.5\0ssi.4\0ssi.3\0ssi.2\0ssi.1\0ssi.0\0audmac.1\0audmac.0\0adg"]
+      status: ["disabled"]
+      memory-region: [[0x57]]
+      audio-clipping-gpio: [[0x58, 0x3, 0x1]]
+      audio-clipping-irq: [[0x1]]
+      ssi-port: [[0x8]]
+    clock-controller@e6590630:
+      compatible: ["renesas,rcar-gen3-usb2-clock-sel"]
+      reg: [[0x0, 0xe6590630, 0x0, 0x2]]
+      clocks: [[0xb, 0x1, 0x2bf, 0x29, 0x59]]
+      clock-names: ["ehci_ohci\0usb_extal\0usb_xtal"]
+      '#clock-cells': [[0x0]]
+      power-domains: [[0x8, 0x20]]
+      linux,phandle: [[0x5a]]
+      phandle: [[0x5a]]
+    usb@ee000000:
+      compatible: ["renesas,xhci-r8a7795\0renesas,rcar-gen3-xhci"]
+      reg: [[0x0, 0xee000000, 0x0, 0xc00]]
+      interrupts: [[0x0, 0x66, 0x4]]
+      clocks: [[0xb, 0x1, 0x148]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x148]]
+      status: ["disabled"]
+    usb@ee020000:
+      compatible: ["renesas,r8a7795-usb3-peri\0renesas,rcar-gen3-usb3-peri"]
+      reg: [[0x0, 0xee020000, 0x0, 0x400]]
+      interrupts: [[0x0, 0x68, 0x4]]
+      clocks: [[0xb, 0x1, 0x148]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x148]]
+      status: ["disabled"]
+    usb@ee080000:
+      compatible: ["generic-ohci"]
+      reg: [[0x0, 0xee080000, 0x0, 0x100]]
+      interrupts: [[0x0, 0x6c, 0x4]]
+      clocks: [[0xb, 0x1, 0x2bf, 0xb, 0x1, 0x2c0]]
+      phys: [[0x27]]
+      phy-names: ["usb"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2bf, 0xb, 0x2c0]]
+      status: ["disabled"]
+      linux,phandle: [[0x5c]]
+      phandle: [[0x5c]]
+    usb@ee0a0000:
+      compatible: ["generic-ohci"]
+      reg: [[0x0, 0xee0a0000, 0x0, 0x100]]
+      interrupts: [[0x0, 0x70, 0x4]]
+      clocks: [[0x5a, 0xb, 0x1, 0x2be]]
+      phys: [[0x5b]]
+      phy-names: ["usb"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2be]]
+      status: ["okay"]
+      nocp: true
+      linux,phandle: [[0x5d]]
+      phandle: [[0x5d]]
+    usb@ee080100:
+      compatible: ["generic-ehci"]
+      reg: [[0x0, 0xee080100, 0x0, 0x100]]
+      interrupts: [[0x0, 0x6c, 0x4]]
+      clocks: [[0xb, 0x1, 0x2bf, 0xb, 0x1, 0x2c0]]
+      phys: [[0x27]]
+      phy-names: ["usb"]
+      companion: [[0x5c]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2bf, 0xb, 0x2c0]]
+      status: ["disabled"]
+    usb@ee0a0100:
+      compatible: ["generic-ehci"]
+      reg: [[0x0, 0xee0a0100, 0x0, 0x100]]
+      interrupts: [[0x0, 0x70, 0x4]]
+      clocks: [[0x5a, 0xb, 0x1, 0x2be]]
+      phys: [[0x5b]]
+      phy-names: ["usb"]
+      companion: [[0x5d]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2be]]
+      status: ["okay"]
+    usb-phy@ee080200:
+      compatible: ["renesas,usb2-phy-r8a7795\0renesas,rcar-gen3-usb2-phy"]
+      reg: [[0x0, 0xee080200, 0x0, 0x700]]
+      interrupts: [[0x0, 0x6c, 0x4]]
+      clocks: [[0xb, 0x1, 0x2bf, 0xb, 0x1, 0x2c0]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2bf, 0xb, 0x2c0]]
+      '#phy-cells': [[0x0]]
+      status: ["okay"]
+      pinctrl-names: ["default"]
+      linux,phandle: [[0x27]]
+      phandle: [[0x27]]
+    usb-phy@ee0a0200:
+      compatible: ["renesas,usb2-phy-r8a7795\0renesas,rcar-gen3-usb2-phy"]
+      reg: [[0x0, 0xee0a0200, 0x0, 0x700]]
+      clocks: [[0xb, 0x1, 0x2be]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2be]]
+      '#phy-cells': [[0x0]]
+      status: ["okay"]
+      pinctrl-names: ["default"]
+      linux,phandle: [[0x5b]]
+      phandle: [[0x5b]]
+    sd@ee100000:
+      compatible: ["renesas,sdhi-r8a7795\0renesas,rcar-gen3-sdhi"]
+      reg: [[0x0, 0xee100000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xa5, 0x4]]
+      clocks: [[0xb, 0x1, 0x13a]]
+      max-frequency: [[0xbebc200]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x13a]]
+      status: ["disabled"]
+    sd@ee120000:
+      compatible: ["renesas,sdhi-r8a7795\0renesas,rcar-gen3-sdhi"]
+      reg: [[0x0, 0xee120000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xa6, 0x4]]
+      clocks: [[0xb, 0x1, 0x139]]
+      max-frequency: [[0xbebc200]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x139]]
+      status: ["disabled"]
+    sd@ee140000:
+      compatible: ["renesas,sdhi-r8a7795\0renesas,rcar-gen3-sdhi"]
+      reg: [[0x0, 0xee140000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xa7, 0x4]]
+      clocks: [[0xb, 0x1, 0x138]]
+      max-frequency: [[0xbebc200]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x138]]
+      status: ["okay"]
+      pinctrl-0: [[0x5e]]
+      pinctrl-1: [[0x5f]]
+      pinctrl-names: ["default\0state_uhs"]
+      vmmc-supply: [[0x60]]
+      vqmmc-supply: [[0x61]]
+      mmc-hs200-1_8v: true
+      bus-width: [[0x8]]
+      drive-strength: [[0x1]]
+      non-removable: true
+    sd@ee160000:
+      compatible: ["renesas,sdhi-r8a7795\0renesas,rcar-gen3-sdhi"]
+      reg: [[0x0, 0xee160000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xa8, 0x4]]
+      clocks: [[0xb, 0x1, 0x137]]
+      max-frequency: [[0xbebc200]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x137]]
+      status: ["disabled"]
+    sata@ee300000:
+      compatible: ["renesas,sata-r8a7795\0renesas,rcar-gen3-sata"]
+      reg: [[0x0, 0xee300000, 0x0, 0x200000]]
+      interrupts: [[0x0, 0x69, 0x4]]
+      clocks: [[0xb, 0x1, 0x32f]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x32f]]
+      status: ["disabled"]
+    interrupt-controller@f1010000:
+      compatible: ["arm,gic-400"]
+      '#interrupt-cells': [[0x3]]
+      '#address-cells': [[0x0]]
+      interrupt-controller: true
+      reg: [[0x0, 0xf1010000, 0x0, 0x1000, 0x0, 0xf1020000, 0x0, 0x20000, 0x0, 0xf1040000,
+          0x0, 0x20000, 0x0, 0xf1060000, 0x0, 0x20000]]
+      interrupts: [[0x1, 0x9, 0xff04]]
+      power-domains: [[0x8, 0x20]]
+      linux,phandle: [[0x18]]
+      phandle: [[0x18]]
+    gsx@fd000000:
+      compatible: ["renesas,gsx"]
+      reg: [[0x0, 0xfd000000, 0x0, 0x40000]]
+      interrupts: [[0x0, 0x77, 0x4]]
+      clocks: [[0xb, 0x1, 0x70]]
+      operating-points-v2: [[0x62, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69]]
+      power-domains: [[0x8, 0x16]]
+      resets: [[0xb, 0x70]]
+      linux,phandle: [[0x1a]]
+      phandle: [[0x1a]]
+    pcie@fe000000:
+      compatible: ["renesas,pcie-r8a7795\0renesas,pcie-rcar-gen3"]
+      reg: [[0x0, 0xfe000000, 0x0, 0x80000]]
+      '#address-cells': [[0x3]]
+      '#size-cells': [[0x2]]
+      bus-range: [[0x0, 0xff]]
+      device_type: ["pci"]
+      ranges: [[0x1000000, 0x0, 0x0, 0x0, 0xfe100000, 0x0, 0x100000, 0x2000000, 0x0,
+          0xfe200000, 0x0, 0xfe200000, 0x0, 0x200000, 0x2000000, 0x0, 0x30000000,
+          0x0, 0x30000000, 0x0, 0x8000000, 0x42000000, 0x0, 0x38000000, 0x0, 0x38000000,
+          0x0, 0x8000000]]
+      dma-ranges: [[0x42000000, 0x0, 0x40000000, 0x0, 0x40000000, 0x0, 0x80000000]]
+      interrupts: [[0x0, 0x74, 0x4, 0x0, 0x75, 0x4, 0x0, 0x76, 0x4]]
+      '#interrupt-cells': [[0x1]]
+      interrupt-map-mask: [[0x0, 0x0, 0x0, 0x0]]
+      interrupt-map: [[0x0, 0x0, 0x0, 0x0, 0x18, 0x0, 0x74, 0x4]]
+      clocks: [[0xb, 0x1, 0x13f, 0x6a]]
+      clock-names: ["pcie\0pcie_bus"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x13f]]
+      status: ["okay"]
+    pcie@ee800000:
+      compatible: ["renesas,pcie-r8a7795\0renesas,pcie-rcar-gen3"]
+      reg: [[0x0, 0xee800000, 0x0, 0x80000]]
+      '#address-cells': [[0x3]]
+      '#size-cells': [[0x2]]
+      bus-range: [[0x0, 0xff]]
+      device_type: ["pci"]
+      ranges: [[0x1000000, 0x0, 0x0, 0x0, 0xee900000, 0x0, 0x100000, 0x2000000, 0x0,
+          0xeea00000, 0x0, 0xeea00000, 0x0, 0x200000, 0x2000000, 0x0, 0xc0000000,
+          0x0, 0xc0000000, 0x0, 0x8000000, 0x42000000, 0x0, 0xc8000000, 0x0, 0xc8000000,
+          0x0, 0x8000000]]
+      dma-ranges: [[0x42000000, 0x0, 0x40000000, 0x0, 0x40000000, 0x0, 0x40000000]]
+      interrupts: [[0x0, 0x94, 0x4, 0x0, 0x95, 0x4, 0x0, 0x96, 0x4]]
+      '#interrupt-cells': [[0x1]]
+      interrupt-map-mask: [[0x0, 0x0, 0x0, 0x0]]
+      interrupt-map: [[0x0, 0x0, 0x0, 0x0, 0x18, 0x0, 0x94, 0x4]]
+      clocks: [[0xb, 0x1, 0x13e, 0x6a]]
+      clock-names: ["pcie\0pcie_bus"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x13e]]
+      status: ["disabled"]
+    imr-lx4@fe860000:
+      compatible: ["renesas,r8a7795-imr-lx4\0renesas,imr-lx4"]
+      reg: [[0x0, 0xfe860000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xc0, 0x4]]
+      clocks: [[0xb, 0x1, 0x337]]
+      power-domains: [[0x8, 0xe]]
+      resets: [[0xb, 0x337]]
+    imr-lx4@fe870000:
+      compatible: ["renesas,r8a7795-imr-lx4\0renesas,imr-lx4"]
+      reg: [[0x0, 0xfe870000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xc1, 0x4]]
+      clocks: [[0xb, 0x1, 0x336]]
+      power-domains: [[0x8, 0xe]]
+      resets: [[0xb, 0x336]]
+    imr-lx4@fe880000:
+      compatible: ["renesas,r8a7795-imr-lx4\0renesas,imr-lx4"]
+      reg: [[0x0, 0xfe880000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xc2, 0x4]]
+      clocks: [[0xb, 0x1, 0x335]]
+      power-domains: [[0x8, 0xe]]
+      resets: [[0xb, 0x335]]
+    imr-lx4@fe890000:
+      compatible: ["renesas,r8a7795-imr-lx4\0renesas,imr-lx4"]
+      reg: [[0x0, 0xfe890000, 0x0, 0x2000]]
+      interrupts: [[0x0, 0xc3, 0x4]]
+      clocks: [[0xb, 0x1, 0x334]]
+      power-domains: [[0x8, 0xe]]
+      resets: [[0xb, 0x334]]
+    vcp4@fe90f000:
+      compatible: ["renesas,vcp4-fcpcs"]
+      reg: [[0x0, 0xfe90f000, 0x0, 0x200]]
+      clocks: [[0xb, 0x1, 0x26b]]
+      power-domains: [[0x8, 0xe]]
+      resets: [[0xb, 0x26b]]
+      renesas,#ch: [[0x0]]
+    vcp4@fe8d0000:
+      compatible: ["renesas,vcp4-ivdp1c"]
+      reg: [[0x0, 0xfe8d0000, 0x0, 0x200, 0x0, 0xfe8d0200, 0x0, 0x200]]
+      interrupts: [[0x0, 0x17c, 0x4, 0x0, 0x17d, 0x4, 0x0, 0xdf, 0x4]]
+      clocks: [[0xb, 0x1, 0x80]]
+      power-domains: [[0x8, 0x19]]
+      resets: [[0xb, 0x80]]
+      renesas,#ch: [[0x2]]
+      renesas,#fcp_ch: [[0x0]]
+    vcp4@fe910000:
+      compatible: ["renesas,vcp4-vcplf"]
+      reg: [[0x0, 0xfe910000, 0x0, 0x200, 0x0, 0xfe910200, 0x0, 0x200]]
+      interrupts: [[0x0, 0x104, 0x4, 0x0, 0x105, 0x4]]
+      clocks: [[0xb, 0x1, 0x82]]
+      power-domains: [[0x8, 0x1a]]
+      resets: [[0xb, 0x82]]
+      renesas,#ch: [[0x0]]
+      renesas,#fcp_ch: [[0x0]]
+    vcp4@fe900000:
+      compatible: ["renesas,vcp4-vdpb"]
+      reg: [[0x0, 0xfe900000, 0x0, 0x200, 0x0, 0xfe900200, 0x0, 0x200]]
+      interrupts: [[0x0, 0xf0, 0x4, 0x0, 0xf1, 0x4]]
+      clocks: [[0xb, 0x1, 0x83]]
+      power-domains: [[0x8, 0x1a]]
+      resets: [[0xb, 0x83]]
+      renesas,#ch: [[0x1]]
+      renesas,#fcp_ch: [[0x0]]
+    fdpm@fe940000:
+      compatible: ["renesas,fdpm"]
+      reg: [[0x0, 0xfe940000, 0x0, 0x2400, 0x0, 0xfe950000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x106, 0x4]]
+      clocks: [[0xb, 0x1, 0x77, 0xb, 0x1, 0x267]]
+      clock-names: ["fdp\0fcp"]
+      power-domains: [[0x8, 0x9]]
+      resets: [[0xb, 0x77, 0xb, 0x267]]
+      reset-names: ["fdp\0fcp"]
+      renesas,#ch: [[0x0]]
+    fdpm@fe944000:
+      compatible: ["renesas,fdpm"]
+      reg: [[0x0, 0xfe944000, 0x0, 0x2400, 0x0, 0xfe951000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x107, 0x4]]
+      clocks: [[0xb, 0x1, 0x76, 0xb, 0x1, 0x266]]
+      clock-names: ["fdp\0fcp"]
+      power-domains: [[0x8, 0x9]]
+      resets: [[0xb, 0x76, 0xb, 0x266]]
+      reset-names: ["fdp\0fcp"]
+      renesas,#ch: [[0x1]]
+    fcp@fea27000:
+      compatible: ["renesas,fcpv"]
+      reg: [[0x0, 0xfea27000, 0x0, 0x200]]
+      clocks: [[0xb, 0x1, 0x25b]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x25b]]
+      linux,phandle: [[0x6b]]
+      phandle: [[0x6b]]
+    fcp@fea2f000:
+      compatible: ["renesas,fcpv"]
+      reg: [[0x0, 0xfea2f000, 0x0, 0x200]]
+      clocks: [[0xb, 0x1, 0x25a]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x25a]]
+      linux,phandle: [[0x6c]]
+      phandle: [[0x6c]]
+    fcp@fea37000:
+      compatible: ["renesas,fcpv"]
+      reg: [[0x0, 0xfea37000, 0x0, 0x200]]
+      clocks: [[0xb, 0x1, 0x259]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x259]]
+      linux,phandle: [[0x6d]]
+      phandle: [[0x6d]]
+    vsp@fe960000:
+      compatible: ["renesas,vspm-vsp2"]
+      reg: [[0x0, 0xfe960000, 0x0, 0x8000]]
+      renesas,has-bru: true
+      renesas,#rpf: [[0x5]]
+      renesas,#uds: [[0x0]]
+      renesas,#wpf: [[0x1]]
+    vspm@fe960000:
+      compatible: ["renesas,vspm"]
+      reg: [[0x0, 0xfe960000, 0x0, 0x8000, 0x0, 0xfe96f000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x10a, 0x4]]
+      clocks: [[0xb, 0x1, 0x272, 0xb, 0x1, 0x25f]]
+      clock-names: ["vsp\0fcp"]
+      renesas,#ch: [[0x3]]
+      renesas,#rpf: [[0x1f]]
+      renesas,#rpf_clut: [[0x6]]
+      renesas,#wpf_rot: [[0x0]]
+      renesas,has-bru: true
+      renesas,#read_outstanding: [[0x0]]
+      renesas,#start_reservation: [[0x2]]
+      renesas,#burst_access: [[0x0]]
+      power-domains: [[0x8, 0x9]]
+      resets: [[0xb, 0x272, 0xb, 0x25f]]
+      reset-names: ["vsp\0fcp"]
+      status: ["okay"]
+    vsp@fe920000:
+      compatible: ["renesas,vspm-vsp2"]
+      reg: [[0x0, 0xfe920000, 0x0, 0x8000]]
+      renesas,has-bru: true
+      renesas,has-lut: true
+      renesas,has-clu: true
+      renesas,has-hgo: true
+      renesas,#rpf: [[0x5]]
+      renesas,#uds: [[0x0]]
+      renesas,#wpf: [[0x1]]
+    vspm@fe920000:
+      compatible: ["renesas,vspm"]
+      reg: [[0x0, 0xfe920000, 0x0, 0x8000, 0x0, 0xfe92f000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x1d1, 0x4]]
+      clocks: [[0xb, 0x1, 0x270, 0xb, 0x1, 0x25e]]
+      clock-names: ["vsp\0fcp"]
+      renesas,#ch: [[0x4]]
+      renesas,#rpf: [[0x1f]]
+      renesas,#rpf_clut: [[0x6]]
+      renesas,#wpf_rot: [[0x0]]
+      renesas,has-lut: true
+      renesas,has-clu: true
+      renesas,has-hgo: true
+      renesas,has-bru: true
+      renesas,#read_outstanding: [[0x0]]
+      renesas,#start_reservation: [[0x2]]
+      renesas,#burst_access: [[0x1]]
+      power-domains: [[0x8, 0x9]]
+      resets: [[0xb, 0x270, 0xb, 0x25e]]
+      reset-names: ["vsp\0fcp"]
+      status: ["disabled"]
+    vsp@fea20000:
+      compatible: ["renesas,vsp2"]
+      reg: [[0x0, 0xfea20000, 0x0, 0x5000]]
+      interrupts: [[0x0, 0x1d2, 0x4]]
+      clocks: [[0xb, 0x1, 0x26f]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x26f]]
+      renesas,#brs: [[0x2]]
+      renesas,fcp: [[0x6b]]
+      linux,phandle: [[0x7c]]
+      phandle: [[0x7c]]
+    vsp@fea28000:
+      compatible: ["renesas,vsp2"]
+      reg: [[0x0, 0xfea28000, 0x0, 0x5000]]
+      interrupts: [[0x0, 0x1d3, 0x4]]
+      clocks: [[0xb, 0x1, 0x26e]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x26e]]
+      renesas,fcp: [[0x6c]]
+      linux,phandle: [[0x7d]]
+      phandle: [[0x7d]]
+    vsp@fea30000:
+      compatible: ["renesas,vsp2"]
+      reg: [[0x0, 0xfea30000, 0x0, 0x5000]]
+      interrupts: [[0x0, 0x1d4, 0x4]]
+      clocks: [[0xb, 0x1, 0x26d]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x26d]]
+      renesas,fcp: [[0x6d]]
+      linux,phandle: [[0x7e]]
+      phandle: [[0x7e]]
+    vsp@fe9a0000:
+      compatible: ["renesas,vspm-vsp2"]
+      reg: [[0x0, 0xfe9a0000, 0x0, 0x8000]]
+      renesas,has-lut: true
+      renesas,has-clu: true
+      renesas,has-hgo: true
+      renesas,has-hgt: true
+      renesas,#rpf: [[0x1]]
+      renesas,#uds: [[0x1]]
+      renesas,#wpf: [[0x1]]
+    vspm@fe9a0000:
+      compatible: ["renesas,vspm"]
+      reg: [[0x0, 0xfe9a0000, 0x0, 0x8000, 0x0, 0xfe9af000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x1bc, 0x4]]
+      clocks: [[0xb, 0x1, 0x277, 0xb, 0x1, 0x263]]
+      clock-names: ["vsp\0fcp"]
+      renesas,#ch: [[0x0]]
+      renesas,#rpf: [[0x1]]
+      renesas,#rpf_clut: [[0x1]]
+      renesas,#wpf_rot: [[0x1]]
+      renesas,has-sru: true
+      renesas,has-uds: true
+      renesas,has-lut: true
+      renesas,has-clu: true
+      renesas,has-hst: true
+      renesas,has-hsi: true
+      renesas,has-hgo: true
+      renesas,has-hgt: true
+      renesas,has-shp: true
+      renesas,#read_outstanding: [[0x2]]
+      renesas,#start_reservation: [[0x2]]
+      power-domains: [[0x8, 0x9]]
+      resets: [[0xb, 0x277, 0xb, 0x263]]
+      reset-names: ["vsp\0fcp"]
+      status: ["okay"]
+    vsp@fe9b0000:
+      compatible: ["renesas,vspm-vsp2"]
+      reg: [[0x0, 0xfe9b0000, 0x0, 0x8000]]
+      renesas,has-lut: true
+      renesas,has-clu: true
+      renesas,has-hgo: true
+      renesas,has-hgt: true
+      renesas,#rpf: [[0x1]]
+      renesas,#uds: [[0x1]]
+      renesas,#wpf: [[0x1]]
+    vspm@fe9b0000:
+      compatible: ["renesas,vspm"]
+      reg: [[0x0, 0xfe9b0000, 0x0, 0x8000, 0x0, 0xfe9bf000, 0x0, 0x200]]
+      interrupts: [[0x0, 0x1bd, 0x4]]
+      clocks: [[0xb, 0x1, 0x276, 0xb, 0x1, 0x262]]
+      clock-names: ["vsp\0fcp"]
+      renesas,#ch: [[0x1]]
+      renesas,#rpf: [[0x1]]
+      renesas,#rpf_clut: [[0x1]]
+      renesas,#wpf_rot: [[0x1]]
+      renesas,has-sru: true
+      renesas,has-uds: true
+      renesas,has-lut: true
+      renesas,has-clu: true
+      renesas,has-hst: true
+      renesas,has-hsi: true
+      renesas,has-hgo: true
+      renesas,has-hgt: true
+      renesas,has-shp: true
+      renesas,#read_outstanding: [[0x2]]
+      renesas,#start_reservation: [[0x2]]
+      power-domains: [[0x8, 0x9]]
+      resets: [[0xb, 0x276, 0xb, 0x262]]
+      reset-names: ["vsp\0fcp"]
+      status: ["disabled"]
+    csi2@fea80000:
+      compatible: ["renesas,r8a7795-csi2"]
+      reg: [[0x0, 0xfea80000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0xb8, 0x4]]
+      clocks: [[0xb, 0x1, 0x2ca]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2ca]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x6e]]
+            linux,phandle: [[0x37]]
+            phandle: [[0x37]]
+          endpoint@1:
+            reg: [[0x1]]
+            remote-endpoint: [[0x6f]]
+            linux,phandle: [[0x39]]
+            phandle: [[0x39]]
+          endpoint@2:
+            reg: [[0x2]]
+            remote-endpoint: [[0x70]]
+            linux,phandle: [[0x3b]]
+            phandle: [[0x3b]]
+          endpoint@3:
+            reg: [[0x3]]
+            remote-endpoint: [[0x71]]
+            linux,phandle: [[0x3d]]
+            phandle: [[0x3d]]
+          endpoint@4:
+            reg: [[0x4]]
+            remote-endpoint: [[0x72]]
+            linux,phandle: [[0x3f]]
+            phandle: [[0x3f]]
+          endpoint@5:
+            reg: [[0x5]]
+            remote-endpoint: [[0x73]]
+            linux,phandle: [[0x40]]
+            phandle: [[0x40]]
+          endpoint@6:
+            reg: [[0x6]]
+            remote-endpoint: [[0x74]]
+            linux,phandle: [[0x41]]
+            phandle: [[0x41]]
+          endpoint@7:
+            reg: [[0x7]]
+            remote-endpoint: [[0x75]]
+            linux,phandle: [[0x42]]
+            phandle: [[0x42]]
+    csi2@feaa0000:
+      compatible: ["renesas,r8a7795-csi2"]
+      reg: [[0x0, 0xfeaa0000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0xf6, 0x4]]
+      clocks: [[0xb, 0x1, 0x2cc]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2cc]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@1:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x1]]
+          endpoint@0:
+            reg: [[0x0]]
+            remote-endpoint: [[0x76]]
+            linux,phandle: [[0x38]]
+            phandle: [[0x38]]
+          endpoint@1:
+            reg: [[0x1]]
+            remote-endpoint: [[0x77]]
+            linux,phandle: [[0x3a]]
+            phandle: [[0x3a]]
+          endpoint@2:
+            reg: [[0x2]]
+            remote-endpoint: [[0x78]]
+            linux,phandle: [[0x3c]]
+            phandle: [[0x3c]]
+          endpoint@3:
+            reg: [[0x3]]
+            remote-endpoint: [[0x79]]
+            linux,phandle: [[0x3e]]
+            phandle: [[0x3e]]
+    hdmi@fead0000:
+      compatible: ["renesas,r8a7795-hdmi\0renesas,rcar-gen3-hdmi"]
+      reg: [[0x0, 0xfead0000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0x185, 0x4]]
+      clocks: [[0xb, 0x1, 0x2d9, 0xb, 0x0, 0x28]]
+      clock-names: ["iahb\0isfr"]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2d9]]
+      status: ["disabled"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@0:
+          reg: [[0x0]]
+          endpoint:
+            remote-endpoint: [[0x7a]]
+            linux,phandle: [[0x7f]]
+            phandle: [[0x7f]]
+        port@1:
+          reg: [[0x1]]
+        port@2:
+          reg: [[0x2]]
+    display@feb00000:
+      compatible: ["renesas,du-r8a7795"]
+      reg: [[0x0, 0xfeb00000, 0x0, 0x80000]]
+      interrupts: [[0x0, 0x100, 0x4, 0x0, 0x10c, 0x4, 0x0, 0x10d, 0x4, 0x0, 0x10e,
+          0x4]]
+      clocks: [[0xb, 0x1, 0x2d4, 0xb, 0x1, 0x2d3, 0xb, 0x1, 0x2d2, 0xb, 0x1, 0x2d1,
+          0x7b]]
+      clock-names: ["du.0\0du.1\0du.2\0du.3\0dclkin.0"]
+      resets: [[0xb, 0x2d4, 0xb, 0x2d4, 0xb, 0x2d2, 0xb, 0x2d2]]
+      reset-names: ["du.0\0du.1\0du.2\0du.3"]
+      vsps: [[0x7c, 0x0, 0x7d, 0x0, 0x7e, 0x0, 0x7c, 0x1]]
+      status: ["okay"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@0:
+          reg: [[0x0]]
+          endpoint: {}
+        port@1:
+          reg: [[0x1]]
+          endpoint:
+            remote-endpoint: [[0x7f]]
+            linux,phandle: [[0x7a]]
+            phandle: [[0x7a]]
+        port@2:
+          reg: [[0x2]]
+        port@3:
+          reg: [[0x3]]
+          endpoint:
+            remote-endpoint: [[0x80]]
+            linux,phandle: [[0x81]]
+            phandle: [[0x81]]
+    lvds@feb90000:
+      compatible: ["renesas,r8a7795-lvds"]
+      reg: [[0x0, 0xfeb90000, 0x0, 0x14]]
+      clocks: [[0xb, 0x1, 0x2d7]]
+      power-domains: [[0x8, 0x20]]
+      resets: [[0xb, 0x2d7]]
+      status: ["okay"]
+      ports:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        port@0:
+          reg: [[0x0]]
+          endpoint:
+            remote-endpoint: [[0x81]]
+            linux,phandle: [[0x80]]
+            phandle: [[0x80]]
+        port@1:
+          reg: [[0x1]]
+          endpoint:
+            remote-endpoint: [[0x82]]
+            linux,phandle: [[0x85]]
+            phandle: [[0x85]]
+    chipid@fff00044:
+      compatible: ["renesas,prr"]
+      reg: [[0x0, 0xfff00044, 0x0, 0x4]]
+    timer:
+      fsl,erratum-a008585: true
+    ipc@1:
+      compatible: ["pcc,uio-rcar-adsp"]
+      reg: [[0x0, 0xec800000, 0x0, 0x80fc, 0x0, 0xece60000, 0x0, 0x10000, 0x0, 0xece78000,
+          0x0, 0x8000, 0x0, 0xece80000, 0x0, 0x10000, 0x0, 0xece90000, 0x0, 0x10000]]
+      interrupts: [[0x0, 0xed, 0x4]]
+      '#address-cells': [[0x2]]
+      '#size-cells': [[0x2]]
+      ranges: true
+      adsp-commgr:
+        slot: [[0x0]]
+        reg: [[0x0, 0x80000000, 0x0, 0x100000]]
+        reg-names: ["shared_mem"]
+        rx-commid: [[0x0]]
+        tx-irq: [[0x0]]
+      adsp-log:
+        slot: [[0x1]]
+        reg: [[0x0, 0x51000000, 0x0, 0x300000]]
+        reg-names: ["logbuf"]
+        no-irq: true
+      adsp-mem:
+        slot: [[0x2]]
+        reg: [[0x0, 0x50000000, 0x0, 0x1000000]]
+        reg-names: ["mem"]
+        no-irq: true
+    ipc0@0xe6260000:
+      compatible: ["pcc,uio-rcar-mfis"]
+      reg: [[0x0, 0xe6260400, 0x0, 0x100]]
+      interrupts: [[0x0, 0xe0, 0x4, 0x0, 0xe1, 0x4, 0x0, 0xe2, 0x4, 0x0, 0xe3, 0x4,
+          0x0, 0xe4, 0x4, 0x0, 0xe5, 0x4, 0x0, 0xe6, 0x4, 0x0, 0xe7, 0x4]]
+      watchdog-slot: [[0x6]]
+      '#address-cells': [[0x2]]
+      '#size-cells': [[0x2]]
+      ranges: true
+      r7-commgr:
+        slot: [[0x0]]
+        reg: [[0x0, 0x53800000, 0x0, 0x100000]]
+        reg-names: ["shared_mem"]
+      r7-log:
+        slot: [[0x1]]
+        reg: [[0x0, 0x53900000, 0x0, 0x300000]]
+        reg-names: ["logbuf"]
+        no-irq: true
+    mapcr7:
+      compatible: ["pcc,uio-rcar-cr7"]
+      reg: [[0x0, 0x51800000, 0x0, 0x2000000, 0x0, 0xe6150000, 0x0, 0x40000]]
+      reg-names: ["cr7_mem\0reg_base"]
+    pmu_a57:
+      interrupt-affinity: [[0x1, 0x2, 0x3]]
+    vdev_uart@e6e60000:
+      compatible: ["ns16550"]
+      reg: [[0x0, 0xe6e60000, 0x0, 0x1000]]
+      interrupts: [[0x0, 0x98, 0x4]]
+      fifo-size: [[0x40]]
+      clock-frequency: [[0x2dc6c00]]
+      current-speed: [[0x1c200]]
+      reg-shift: [[0x2]]
+      no-loopback-test: true
+    vchar@0xf8100000:
+      compatible: ["coqoshv,vchar"]
+      '#address-cells': [[0x2]]
+      '#size-cells': [[0x2]]
+      '#interrupt-cells': [[0x3]]
+      interrupts: [[0x0, 0x4d, 0x4]]
+      reg: [[0x0, 0xf8100000, 0x0, 0x1000, 0x0, 0xf8101000, 0x0, 0x1000, 0x0, 0x0,
+          0x0, 0x0]]
+      reg-names: ["tx\0rx\0vgpu"]
+      irqcap: [[0x45]]
+      flags: [[0x30006]]
+    vchar@0xf8102000:
+      compatible: ["coqoshv,vchar"]
+      '#address-cells': [[0x2]]
+      '#size-cells': [[0x2]]
+      '#interrupt-cells': [[0x3]]
+      interrupts: [[0x0, 0x4e, 0x4]]
+      reg: [[0x0, 0xf8102000, 0x0, 0x1000, 0x0, 0xf8103000, 0x0, 0x1000, 0x0, 0x0,
+          0x0, 0x0]]
+      reg-names: ["tx\0rx\0vmctrl"]
+      irqcap: [[0x46]]
+      flags: [[0x6]]
+    coqoshvguest@4C000000:
+      '#address-cells': [[0x2]]
+      '#size-cells': [[0x2]]
+      '#interrupt-cells': [[0x3]]
+      compatible: ["coqoshv,guest"]
+      reg: [[0x0, 0x4c000000, 0x0, 0x4000000, 0x0, 0x64000000, 0x0, 0xc000000, 0x0,
+          0x90000000, 0x0, 0xb800000, 0x5, 0x40000000, 0x0, 0x20000000, 0x5, 0xb0000000,
+          0x0, 0x2fffb000, 0x4, 0xa2c00000, 0x0, 0x3d400000]]
+      interrupts: [[0x0, 0x8d, 0x4, 0x0, 0x8e, 0x4, 0x0, 0x8f, 0x4, 0x0, 0x90, 0x4,
+          0x0, 0x91, 0x4, 0x0, 0x92, 0x4]]
+      interrupt-names: ["channel0\0channel1\0channel2\0channel3\0channel4\0channel5"]
+      guest-name: ["android"]
+      channel@0:
+        channel-id: [[0x0]]
+        loc-gate-id: [[0x5b]]
+        rem-gate-id: [[0x5a]]
+      channel@1:
+        channel-id: [[0x1]]
+        loc-gate-id: [[0x5d]]
+        rem-gate-id: [[0x5c]]
+      channel@2:
+        channel-id: [[0x2]]
+        loc-gate-id: [[0x5f]]
+        rem-gate-id: [[0x5e]]
+      channel@3:
+        channel-id: [[0x3]]
+        loc-gate-id: [[0x61]]
+        rem-gate-id: [[0x60]]
+      channel@4:
+        channel-id: [[0x4]]
+        loc-gate-id: [[0x63]]
+        rem-gate-id: [[0x62]]
+      channel@5:
+        channel-id: [[0x5]]
+        loc-gate-id: [[0x65]]
+        rem-gate-id: [[0x64]]
+      coqoshvmmio@5DFFFE000:
+        compatible: ["coqoshv,mmio"]
+        reg: [[0x5, 0xdfffe000, 0x0, 0x1000]]
+        channel-id: [[0x0]]
+        tag: [[0x0]]
+      coqoshvmmio@5DFFFF000:
+        compatible: ["coqoshv,mmio"]
+        reg: [[0x5, 0xdffff000, 0x0, 0x1000]]
+        channel-id: [[0x1]]
+        tag: [[0x1]]
+      coqoshvmmio@5DFFFD000:
+        compatible: ["coqoshv,mmio"]
+        reg: [[0x5, 0xdfffd000, 0x0, 0x1000]]
+        channel-id: [[0x2]]
+        tag: [[0x2]]
+      coqoshvmmio@5DFFFC000:
+        compatible: ["coqoshv,mmio"]
+        reg: [[0x5, 0xdfffc000, 0x0, 0x1000]]
+        channel-id: [[0x3]]
+        tag: [[0x3]]
+      coqoshvmmio@5DFFFB000:
+        compatible: ["coqoshv,mmio"]
+        reg: [[0x5, 0xdfffb000, 0x0, 0x1000]]
+        channel-id: [[0x4]]
+        tag: [[0x4]]
+      coqoshvmmio@9B944000:
+        compatible: ["coqoshv,mmio"]
+        reg: [[0x0, 0x9b944000, 0x0, 0x1000]]
+        channel-id: [[0x5]]
+        tag: [[0x5]]
+  thermal-zones:
+    emergency:
+      polling-delay: [[0x3e8]]
+      on-temperature: [[0x1adb0]]
+      off-temperature: [[0x17318]]
+      target_cpus: [[0x2, 0x3, 0x4, 0x5, 0x6, 0x7]]
+      status: ["disabled"]
+    sensor-thermal1:
+      polling-delay-passive: [[0xfa]]
+      polling-delay: [[0x0]]
+      thermal-sensors: [[0x83, 0x0]]
+      sustainable-power: [[0x18a9]]
+      trips:
+        sensor1-crit:
+          temperature: [[0x1d4c0]]
+          hysteresis: [[0x3e8]]
+          type: ["critical"]
+    sensor-thermal2:
+      polling-delay-passive: [[0xfa]]
+      polling-delay: [[0x0]]
+      thermal-sensors: [[0x83, 0x1]]
+      sustainable-power: [[0x18a9]]
+      trips:
+        sensor2-crit:
+          temperature: [[0x1d4c0]]
+          hysteresis: [[0x3e8]]
+          type: ["critical"]
+    sensor-thermal3:
+      polling-delay-passive: [[0xfa]]
+      polling-delay: [[0x0]]
+      thermal-sensors: [[0x83, 0x2]]
+      trips:
+        trip-point0:
+          temperature: [[0x15f90]]
+          hysteresis: [[0x3e8]]
+          type: ["passive"]
+        trip-point1:
+          temperature: [[0x186a0]]
+          hysteresis: [[0x3e8]]
+          type: ["passive"]
+          linux,phandle: [[0x84]]
+          phandle: [[0x84]]
+        sensor3-crit:
+          temperature: [[0x1d4c0]]
+          hysteresis: [[0x3e8]]
+          type: ["critical"]
+      cooling-maps:
+        map0:
+          trip: [[0x84]]
+          cooling-device: [[0x1, 0x0, 0x2]]
+          contribution: [[0x400]]
+        map1:
+          trip: [[0x84]]
+          cooling-device: [[0x4, 0x0, 0x2]]
+          contribution: [[0x400]]
+  timer:
+    compatible: ["arm,armv8-timer"]
+    interrupts-extended: [[0x18, 0x1, 0xd, 0xff08, 0x18, 0x1, 0xe, 0xff08, 0x18, 0x1,
+        0xb, 0xff08, 0x18, 0x1, 0xa, 0xff08]]
+  usb3s0:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    linux,phandle: [[0x28]]
+    phandle: [[0x28]]
+  usb_extal:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x2faf080]]
+    linux,phandle: [[0x29]]
+    phandle: [[0x29]]
+  chosen:
+    bootargs: ["smp rdinit=/init root=LABEL=rootfs_linux1 rw rootwait switch_root
+        earlycon=uart8250,mmio32,0xe6e60000,115200n8 console=ttyS0,115200,n8 maxcpus=7
+        swiotlb=0x5f00 clk_ignore_unused"]
+    stdout-path: ["serial0:115200n8"]
+    '#size-cells': [[0x2]]
+    linux,initrd-start: [[0x0, 0x49300000]]
+    linux,initrd-end: [[0x0, 0x4a600000]]
+  memory@48000000:
+    device_type: ["memory"]
+    reg: [[0x0, 0x48000000, 0x0, 0x4000000]]
+  memory@480000000:
+    device_type: ["memory"]
+    reg: [[0x4, 0x80000000, 0x0, 0x22c00000]]
+  memory@580000000:
+    device_type: ["memory"]
+    reg: [[0x5, 0x80000000, 0x0, 0x30000000]]
+  reserved-memory:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    ranges: true
+    adspfw@0x50000000:
+      compatible: ["shared-dma-pool"]
+      reg: [[0x0, 0x50000000, 0x0, 0x1000000]]
+      reusable: true
+      linux,phandle: [[0x57]]
+      phandle: [[0x57]]
+    adsplog@0x51000000:
+      reg: [[0x0, 0x51000000, 0x0, 0x300000]]
+    adspshm@0x80000000:
+      reg: [[0x0, 0x80000000, 0x0, 0x400000]]
+      no-map: true
+    cr7@51800000:
+      reg: [[0x0, 0x51800000, 0x0, 0x2000000]]
+    cr7shm@53800000:
+      reg: [[0x0, 0x53800000, 0x0, 0x800000]]
+      reusable: true
+    linux,lossy_decompress:
+      compatible: ["shared-dma-pool"]
+      reg: [[0x0, 0x54000000, 0x0, 0x3000000]]
+      no-map: true
+      linux,phandle: [[0x87]]
+      phandle: [[0x87]]
+    linux,cma:
+      compatible: ["shared-dma-pool"]
+      reg: [[0x0, 0x57000000, 0x0, 0xd000000]]
+      linux,cma-default: true
+      reusable: true
+    linux,multimedia:
+      compatible: ["shared-dma-pool"]
+      reg: [[0x0, 0x70000000, 0x0, 0x10000000]]
+      reusable: true
+      linux,phandle: [[0x86]]
+      phandle: [[0x86]]
+    linux,odirect1:
+      reg: [[0x0, 0x4c000000, 0x0, 0x4000000]]
+    linux,odirect2:
+      reg: [[0x0, 0x64000000, 0x0, 0xc000000]]
+    linux,odirect3:
+      reg: [[0x0, 0x90000000, 0x0, 0xb800000]]
+    linux,odirect4:
+      reg: [[0x5, 0x40000000, 0x0, 0x20000000]]
+    linux,odirect5:
+      reg: [[0x5, 0xb0000000, 0x0, 0x2fffb000]]
+    linux,odirect6:
+      reg: [[0x4, 0xa2c00000, 0x0, 0x3d400000]]
+  audio_clk:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x5dc000]]
+    linux,phandle: [[0x8b]]
+    phandle: [[0x8b]]
+  avb_alsa:
+    compatible: ["cetitec,avb-alsa"]
+  avb_video:
+    compatible: ["cetitec,avb-video"]
+  dsp:
+    compatible: ["pcc,adsp_snd_card"]
+    reg: [[0x0, 0x80100000, 0x0, 0x8000]]
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    ranges: true
+    channels: [[0x8]]
+    streamID: [[0x0]]
+    playback: true
+  ref:
+    compatible: ["pcc,adsp_snd_card"]
+    reg: [[0x0, 0x80130000, 0x0, 0x8000]]
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    ranges: true
+    channels: [[0x2]]
+    streamID: [[0x1]]
+    capture: true
+  du_dotclkin0:
+    compatible: ["fixed-clock"]
+    '#clock-cells': [[0x0]]
+    status: ["okay"]
+    clock-frequency: [[0x3a35ae0]]
+    linux,phandle: [[0x7b]]
+    phandle: [[0x7b]]
+  lvds:
+    compatible: ["panel-lvds"]
+    data-mapping: ["jeida-24"]
+    width-mm: [[0xbf]]
+    height-mm: [[0x69]]
+    panel-timing:
+      clock-frequency: [[0x3a35ae0]]
+      hactive: [[0x500]]
+      vactive: [[0x280]]
+      hsync-len: [[0x28]]
+      hfront-porch: [[0x32]]
+      hback-porch: [[0x32]]
+      vfront-porch: [[0x1e]]
+      vback-porch: [[0x1e]]
+      vsync-len: [[0x14]]
+    port:
+      endpoint:
+        remote-endpoint: [[0x85]]
+        linux,phandle: [[0x82]]
+        phandle: [[0x82]]
+  mibstd3_codec_audio_out:
+    compatible: ["tsd,mibstd3-codec"]
+    '#sound-dai-cells': [[0x0]]
+    playback-channels-min: [[0x8]]
+    playback-channels-max: [[0x8]]
+    playback-rates: [[0x80]]
+  mibstd3_codec_bt:
+    compatible: ["tsd,mibstd3-codec"]
+    '#sound-dai-cells': [[0x0]]
+    playback-rates: [[0xa]]
+    playback-channels-min: [[0x2]]
+    playback-channels-max: [[0x2]]
+    capture-rates: [[0xa]]
+    capture-channels-min: [[0x2]]
+    capture-channels-max: [[0x2]]
+    linux,phandle: [[0x8e]]
+    phandle: [[0x8e]]
+  mibstd3_codec_dab:
+    compatible: ["tsd,mibstd3-codec"]
+    '#sound-dai-cells': [[0x0]]
+    capture-rates: [[0x80]]
+    linux,phandle: [[0x8d]]
+    phandle: [[0x8d]]
+  mibstd3_codec_fm:
+    compatible: ["tsd,mibstd3-codec"]
+    '#sound-dai-cells': [[0x0]]
+    capture-channels-min: [[0x1]]
+    capture-channels-max: [[0x8]]
+    capture-rates: [[0x80]]
+    linux,phandle: [[0x8a]]
+    phandle: [[0x8a]]
+  mmngr:
+    compatible: ["renesas,mmngr"]
+    memory-region: [[0x86, 0x87]]
+  mmngrbuf:
+    compatible: ["renesas,mmngrbuf"]
+  regulator0:
+    compatible: ["regulator-fixed"]
+    regulator-name: ["fixed-1.8V"]
+    regulator-min-microvolt: [[0x1b7740]]
+    regulator-max-microvolt: [[0x1b7740]]
+    regulator-boot-on: true
+    regulator-always-on: true
+    linux,phandle: [[0x61]]
+    phandle: [[0x61]]
+  regulator1:
+    compatible: ["regulator-fixed"]
+    regulator-name: ["fixed-3.3V"]
+    regulator-min-microvolt: [[0x325aa0]]
+    regulator-max-microvolt: [[0x325aa0]]
+    regulator-boot-on: true
+    regulator-always-on: true
+    linux,phandle: [[0x60]]
+    phandle: [[0x60]]
+  sound:
+    compatible: ["simple-audio-card"]
+    simple-audio-card,name: ["mib3 audio"]
+    simple-audio-card,dai-link@0:
+      format: ["i2s"]
+      bitclock-master: [[0x88]]
+      bitclock-inversion: [[0x1]]
+      frame-inversion: [[0x1]]
+      frame-master: [[0x88]]
+      cpu:
+        sound-dai: [[0x89, 0x0]]
+        dai-tdm-slot-num: [[0x8]]
+        dai-tdm-slot-width: [[0x10]]
+      codec:
+        sound-dai: [[0x8a]]
+        dai-tdm-slot-num: [[0x8]]
+        dai-tdm-slot-width: [[0x10]]
+        clocks: [[0x8b]]
+        linux,phandle: [[0x88]]
+        phandle: [[0x88]]
+    simple-audio-card,dai-link@1:
+      format: ["i2s"]
+      bitclock-master: [[0x8c]]
+      bitclock-inversion: [[0x1]]
+      frame-master: [[0x8c]]
+      cpu:
+        sound-dai: [[0x89, 0x1]]
+        dai-tdm-slot-width: [[0x10]]
+      codec:
+        sound-dai: [[0x8d]]
+        clocks: [[0x8b]]
+        linux,phandle: [[0x8c]]
+        phandle: [[0x8c]]
+    simple-audio-card,dai-link@2:
+      format: ["i2s"]
+      bitclock-master: [[0x89]]
+      dai-tdm-slot-num: [[0x2]]
+      frame-inversion: [[0x1]]
+      frame-master: [[0x89]]
+      cpu:
+        sound-dai: [[0x89, 0x2]]
+        dai-tdm-slot-width: [[0x10]]
+      codec:
+        sound-dai: [[0x8e]]
+        clocks: [[0x8b]]
+  vspm_if:
+    compatible: ["renesas,vspm_if"]
+  memory@50000000:
+    device_type: ["memory"]
+    reg: [[0x0, 0x50000000, 0x0, 0x14000000]]
+  memory@70000000:
+    device_type: ["memory"]
+    reg: [[0x0, 0x70000000, 0x0, 0x20000000]]
+  memory@502000000:
+    device_type: ["memory"]
+    reg: [[0x5, 0x2000000, 0x0, 0x3e000000]]
+  memory@4c000000:
+    device_type: ["memory"]
+    reg: [[0x0, 0x4c000000, 0x0, 0x4000000]]
+  memory@64000000:
+    device_type: ["memory"]
+    reg: [[0x0, 0x64000000, 0x0, 0xc000000]]
+  memory@90000000:
+    device_type: ["memory"]
+    reg: [[0x0, 0x90000000, 0x0, 0xb800000]]
+  memory@540000000:
+    device_type: ["memory"]
+    reg: [[0x5, 0x40000000, 0x0, 0x20000000]]
+  memory@5b0000000:
+    device_type: ["memory"]
+    reg: [[0x5, 0xb0000000, 0x0, 0x2fffb000]]
+  memory@4a2c00000:
+    device_type: ["memory"]
+    reg: [[0x4, 0xa2c00000, 0x0, 0x3d400000]]
+...

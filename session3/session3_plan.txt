@@ -1,0 +1,128 @@
+Magic Methods
+
+Magic Methods:
+    __init__ method
+    __new__ method
+    Callable Objects:
+        __call__(self, [args...]) Allows an instance of a class to be called as a function
+
+    Comparison magic methods:
+        __eq__(self, other): ==
+        __ne__(self, other): !=
+        __lt__(self, other): <
+        __gt__(self, other): >
+        __le__(self, other): <=
+        __ge__(self, other): >=
+
+    Type conversion magic methods:
+        __int__(self) Implements type conversion to int.
+        __long__(self) Implements type conversion to long.
+        __float__(self) Implements type conversion to float.
+        __complex__(self) Implements type conversion to complex.
+        __oct__(self) Implements type conversion to octal.
+        __hex__(self) Implements type conversion to hexadecimal.
+
+    Representing your Classes:
+        __str__(self):
+        __repr__(self):
+        __unicode__(self):
+        __format__(self, formatstr):
+        __hash__(self):
+        __nonzero__(self):
+        __dir__(self) :
+
+    Context Managers:
+        with open (’foo. txt ’) as bar:
+        # perform some action with bar
+
+        __enter__(self)
+        __exit__(self, exception_type, exception_value, traceback)
+
+
+    Numeric Magic Methods:
+     - Unary operators and functions:
+        __pos__(self): +some_object
+        __neg__(self): -some_object
+        __abs__(self):  abs() function.
+        __invert__(self): ~ operator.
+        __round__(self, n): round() function
+        __floor__(self) : math.floor(), rounding down to the nearest integer.
+        __ceil__(self) :math.ceil(), rounding up to the nearestinteger.
+        __trunc__(self) : math.trunc(), truncating to an integral
+
+     - Normal arithmetic operators:
+        __add__(self, other) Implements addition.
+        __sub__(self, other) Implements subtraction.
+        __mul__(self, other) Implements multiplication.
+        __floordiv__(self, other) Implements integer division using the // operator.
+        __div__(self, other) Implements division using the / operator.
+        __truediv__(self, other) Implements true division. Note that this only works when from
+        __future__ import division is in effect.
+        __mod__(self, other) Implements modulo using the % operator.
+        __divmod__(self, other) Implements behavior for long division using the divmod() built in function.
+        __pow__ Implements behavior for exponents using the ** operator.
+        __lshift__(self, other) Implements left bitwise shift using the << operator.
+        __rshift__(self, other) Implements right bitwise shift using the >> operator.
+        __and__(self, other) Implements bitwise and using the & operator.
+        __or__(self, other) Implements bitwise or using the | operator.
+        __xor__(self, other) Implements bitwise xor using the ^ operator.
+
+    Augmented assignment:
+        __iadd__(self, other) Implements addition with assignment. x += 1 # in other words x = x + 1
+        __isub__(self, other) Implements subtraction with assignment.
+        __imul__(self, other) Implements multiplication with assignment.
+        __ifloordiv__(self, other) Implements integer division with assignment using the //= operator.
+        __idiv__(self, other) Implements division with assignment using the /= operator.
+        __imod__(self, other) Implements modulo with assignment using the %= operator.
+        __ipow__ Implements behavior for exponents with assignment using the **= operator.
+
+    The magic behind containers:
+        __len__(self) Returns the length of the container. Part of the protocol for both immutable
+        and mutable containers.
+        __getitem__(self, key) Defines behavior for when an item is accessed, using the notation self[key].
+        __setitem__(self, key, value) self[key] = value.
+        __delitem__(self, key) Defines behavior for when an item is deleted (e.g. del self[key]).
+        __iter__(self) Should return an iterator for the container.
+        __reversed__(self) Called to implement behavior for the reversed() built in function.
+        __contains__(self, item) True if it
+        __missing__(self, key)
+
+    Controlling Attribute Access:
+        __getattr__(self, name):
+        __setattr__(self, name, value):
+        __delattr__(self, name):
+        __getattribute__(self, name):
+
+
+Ex:
+class FunctionalList :
+    ’’’A class wrapping a list with some extra functional
+    magic , like head , tail , init , last , drop , and take . ’’’
+    def __init__ (self , values = None ):
+        if values is None :
+            self . values = []
+        else :
+            self . values = values
+
+    def __len__ ( self ):
+        return len ( self . values )
+
+    def __getitem__ (self , key ):
+        # if key is of invalid type or value , the list values
+        # will raise the error
+        return self . values [ key]
+
+    def __setitem__ (self , key , value ):
+        self . values [ key] = value
+
+    def __delitem__ (self , key ):
+        del self . values [key ]
+
+    def __iter__ ( self ):
+        return iter ( self . values )
+
+    def __reversed__ ( self ):
+        return reversed ( self . values )
+
+    def append (self , value ):
+        self . values . append ( value )

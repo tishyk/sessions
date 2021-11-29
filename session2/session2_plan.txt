@@ -1,0 +1,8 @@
+__class__, __name__ and __doc__ variables +
+How to get all parent classes with __mro__ variable +
+Calling parent class methods with super() method. Who is a parent for a parent class. +
+Mixins
+
+_ __
+Descriptor protocol
+Property decorator +
